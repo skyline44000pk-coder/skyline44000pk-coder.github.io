@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="SKYLINE CONSTRUCTION & TRADING — construction, civil works and building material supply in Islamabad and Rawalpindi, Pakistan.">
+<meta name="theme-color" content="#07172f">
+<title>SKYLINE CONSTRUCTION & TRADING | Islamabad & Rawalpindi</title>
+<style>
+:root{--navy:#07172f;--navy2:#0b2447;--gold:#eab83f;--cream:#f6f4ef;--ink:#172235;--muted:#647084}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{background:rgba(5,19,40,.97);color:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #d6a83a55}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.08em}.brand img{width:52px;height:52px;object-fit:cover;border-radius:50%;border:2px solid var(--gold)}.brand span{display:block;font-size:10px;color:var(--gold);letter-spacing:.16em}
+nav{display:flex;gap:22px;align-items:center;font-size:13px;font-weight:700}nav a:hover{color:var(--gold)}.nav-cta,.btn{display:inline-block;background:var(--gold);color:#111a28;padding:12px 19px;border-radius:3px;font-weight:800;font-size:13px}
+.hero{background:linear-gradient(110deg,rgba(3,15,33,.97),rgba(7,31,62,.84)),url('skyline-logo.png') center/cover;color:white;padding:92px 0 88px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid #eab83f55;border-radius:50%;right:-130px;top:-140px;box-shadow:0 0 0 25px #eab83f0d,0 0 0 55px #eab83f0a}
+.hero-inner{position:relative;z-index:1;max-width:760px}.eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.04;margin:18px 0}.hero h1 em{font-style:normal;color:var(--gold)}.hero p{max-width:650px;color:#e0e7f1;font-size:17px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn-outline{display:inline-block;border:1px solid #eab83f;color:#fff;padding:11px 19px;border-radius:3px;font-weight:700;font-size:13px}
+.trust{background:var(--gold);padding:15px 0}.trust-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px;font-weight:800;letter-spacing:.08em;color:#172235}
+section{padding:76px 0}.section-tag{color:#a87910;text-transform:uppercase;letter-spacing:.17em;font-size:11px;font-weight:800}.section-title{font-size:clamp(28px,4vw,42px);line-height:1.15;margin:10px 0 14px;color:var(--navy)}.lead{color:var(--muted);max-width:700px}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}.logo-panel{background:radial-gradient(circle at center,#123b70,#06152d 70%);padding:25px;border:1px solid #d4a63d;border-radius:8px;text-align:center}.logo-panel img{width:min(100%,390px);height:auto;display:block;margin:auto;border-radius:5px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.card{padding:25px;border:1px solid #e5e8ed;border-top:3px solid var(--gold);border-radius:5px;background:#fff;box-shadow:0 8px 25px #0a1d3510}.card .num{color:#b58a25;font-size:12px;font-weight:900;letter-spacing:.15em}.card h3{margin:10px 0 8px;color:var(--navy)}.card p{margin:0;color:var(--muted);font-size:14px}
+.materials{background:var(--cream)}.material-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}.material{background:#fff;padding:22px 16px;border-radius:5px;border:1px solid #e8e5dc}.material strong{display:block;color:var(--navy);font-size:16px}.material span{font-size:12px;color:var(--muted)}
+.projects-box{background:var(--navy);color:#fff;border-radius:8px;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:25px}.projects-box h2{color:#fff;margin:8px 0}.projects-box p{color:#c8d2e0;max-width:620px;margin:0}
+.contact{background:linear-gradient(130deg,#07172f,#0b2a50);color:#fff}.contact .section-title{color:#fff}.contact .lead{color:#c8d2e0}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;margin-top:28px}.contact-card{background:#ffffff0d;border:1px solid #ffffff22;border-radius:6px;padding:25px}.contact-card small{color:var(--gold);font-weight:800;letter-spacing:.12em;text-transform:uppercase}.contact-card p{margin:7px 0 18px}.contact-card a{color:#fff}.contact-card a:hover{color:var(--gold)}
+footer{background:#041020;color:#b8c3d1;padding:25px 0;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer-inner strong{color:var(--gold)}
+.float-wa{position:fixed;right:18px;bottom:18px;background:#1da85a;color:white;padding:13px 17px;border-radius:30px;font-size:13px;font-weight:800;box-shadow:0 5px 22px #0003;z-index:20}
+@media(max-width:760px){nav{gap:10px;flex-wrap:wrap;justify-content:flex-end;font-size:11px}.nav{padding:10px 0}.brand{font-size:12px}.brand img{width:43px;height:43px}.nav-cta{display:none}.hero{padding:70px 0}.about-grid,.contact-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.material-grid{grid-template-columns:repeat(2,1fr)}.projects-box{display:block;padding:27px}.projects-box .btn{margin-top:20px}}
+@media(max-width:430px){nav a:nth-child(4){display:none}.trust-inner{font-size:10px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#home"><img src="skyline-logo.png" alt="SKYLINE logo"><div>SKYLINE<span>CONSTRUCTION & TRADING</span></div></a>
+<nav aria-label="Main navigation"><a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#services">SERVICES</a><a href="#materials">MATERIALS</a><a href="#contact">CONTACT</a></nav>
+<a class="nav-cta" href="https://wa.me/923139826270">GET IN TOUCH</a>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-inner">
+<div class="eyebrow">Islamabad & Rawalpindi · Pakistan</div>
+<h1>Building Trust.<br><em>Creating Excellence.</em></h1>
+<p>SKYLINE CONSTRUCTION & TRADING supports your building journey with construction and civil works services, along with building material supply.</p>
+<div class="hero-actions"><a class="btn" href="https://wa.me/923139826270?text=Assalam-o-Alaikum%2C%20I%20want%20to%20inquire%20about%20SKYLINE%20services.">WhatsApp Us</a><a class="btn-outline" href="#services">Explore Our Services</a></div>
+</div></section>
+<div class="trust"><div class="wrap trust-inner"><span>CONSTRUCTION & CIVIL WORKS</span><span>BUILDING MATERIAL SUPPLY</span><span>ISLAMABAD & RAWALPINDI</span></div></div>
+<section id="about"><div class="wrap about-grid">
+<div><div class="section-tag">Who we are</div><h2 class="section-title">Your Building Partner</h2>
+<p class="lead">SKYLINE CONSTRUCTION & TRADING is a construction and building-material services business serving Islamabad and Rawalpindi. We help customers with construction and civil works requirements, material supply, and sales and purchase assistance.</p>
+<p class="lead">Get in touch to discuss your project or material requirements.</p><a class="btn" href="#contact">Contact SKYLINE</a></div>
+<div class="logo-panel"><img src="skyline-logo.png" alt="SKYLINE Construction and Trading official logo"></div>
+</div></section>
+<section id="services" style="background:#f8f9fb"><div class="wrap">
+<div class="section-tag">What we do</div><h2 class="section-title">Our Services</h2><p class="lead">Practical support for your construction and building material needs.</p>
+<div class="cards">
+<article class="card"><div class="num">01 / SERVICE</div><h3>Construction Works</h3><p>Construction-related services and support for building projects.</p></article>
+<article class="card"><div class="num">02 / SERVICE</div><h3>Civil Works</h3><p>Civil works assistance for project requirements in Islamabad and Rawalpindi.</p></article>
+<article class="card"><div class="num">03 / SERVICE</div><h3>Building Material Supply</h3><p>Supply assistance for cement, steel, bricks, blocks and other building materials.</p></article>
+<article class="card"><div class="num">04 / SERVICE</div><h3>Material Guidance</h3><p>Get in touch to discuss material options and your project requirements.</p></article>
+<article class="card"><div class="num">05 / SERVICE</div><h3>Sales & Purchase Assistance</h3><p>Assistance related to buying and selling construction materials.</p></article>
+<article class="card"><div class="num">06 / SERVICE</div><h3>Project Enquiries</h3><p>Share your project details and connect with the SKYLINE team.</p></article>
+</div></div></section>
+<section class="materials" id="materials"><div class="wrap">
+<div class="section-tag">Building essentials</div><h2 class="section-title">Building Materials</h2><p class="lead">Contact us for availability, brands, quality options and current quotations. Rates may change and are confirmed on inquiry.</p>
+<div class="material-grid"><div class="material"><strong>Cement</strong><span>Different brands and options</span></div><div class="material"><strong>Steel / Saria</strong><span>Construction steel requirements</span></div><div class="material"><strong>Bricks</strong><span>Building brick options</span></div><div class="material"><strong>Blocks</strong><span>Concrete block options</span></div></div>
+</div></section>
+<section id="projects"><div class="wrap"><div class="projects-box"><div><div class="section-tag">Our work</div><h2>Have a project in mind?</h2><p>We are preparing our project gallery. Contact SKYLINE to discuss your construction or material requirements.</p></div><a class="btn" href="https://wa.me/923139826270">Discuss Your Project</a></div></div></section>
+<section class="contact" id="contact"><div class="wrap">
+<div class="section-tag">Let's connect</div><h2 class="section-title">Contact SKYLINE</h2><p class="lead">For construction, civil works and building material enquiries, contact us directly.</p>
+<div class="contact-grid">
+<div class="contact-card"><small>Call / WhatsApp</small><p><a href="tel:+923139826270">+92 313 9826270</a></p><a class="btn" href="https://wa.me/923139826270?text=Assalam-o-Alaikum%2C%20I%20want%20to%20contact%20SKYLINE.">Message on WhatsApp</a></div>
+<div class="contact-card"><small>Email</small><p><a href="mailto:skyline4400.pk@gmail.com">skyline4400.pk@gmail.com</a></p><small>Service Area</small><p>Islamabad & Rawalpindi, Pakistan</p></div>
+</div></div></section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> <strong>SKYLINE CONSTRUCTION & TRADING</strong>. All rights reserved.</span><span>Building Trust, Creating Excellence.</span></div></footer>
+<a class="float-wa" href="https://wa.me/923139826270" aria-label="Chat with SKYLINE on WhatsApp">WhatsApp</a>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
