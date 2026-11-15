@@ -19,6 +19,12 @@
 <meta name="twitter:title" content="SKYLINE Construction & Trading">
 <meta name="twitter:description" content="Construction and building material support in Islamabad & Rawalpindi.">
 <meta name="theme-color" content="#071a2d">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/app-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/app-icon.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="skylines.com">
+<meta name="mobile-web-app-capable" content="yes">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -123,6 +129,9 @@ section{padding:108px 0}.section-head{margin-bottom:48px}.section-head h2{font-s
 {"@type":"Question","name":"What information should I share for construction work?","acceptedAnswer":{"@type":"Answer","text":"Share the site location, type of work, approximate measurements, project stage, drawings or photos if available, and your expected timeline."}}
 ]}
 </script>
+<style>
+#appInstallBar{position:fixed;left:14px;right:14px;bottom:14px;z-index:99;display:none;align-items:center;justify-content:space-between;gap:12px;padding:13px 15px;background:#071a2d;color:#fff;border:1px solid #c5a46d;border-radius:12px;box-shadow:0 8px 30px #0003;font:600 13px Arial}#appInstallBar button{border:0;border-radius:7px;background:#c5a46d;color:#071a2d;padding:10px 14px;font-weight:800}#appInstallBar .dismiss{background:transparent;color:#fff;padding:4px 8px;font-size:18px}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="wrap"><span>ISLAMABAD & RAWALPINDI · PAKISTAN</span><span>Call / WhatsApp: <a href="tel:+923139826270">+92 313 9826270</a></span></div></div>
@@ -208,7 +217,10 @@ section{padding:108px 0}.section-head{margin-bottom:48px}.section-head h2{font-s
 <div class="detail"><small>Service area</small><span>Islamabad & Rawalpindi, Pakistan</span></div>
 </div></div></div></section>
 </main>
+<div id="appInstallBar" role="region" aria-label="Install skylines.com app"><span><b>skylines.com</b><br><small>Install our app for quick access</small></span><button id="installAppBtn" type="button">INSTALL APP</button><button class="dismiss" id="dismissInstall" type="button" aria-label="Dismiss">×</button></div>
 <div class="quick-actions" aria-label="Quick contact"><a href="https://wa.me/923139826270?text=Assalam-o-Alaikum%2C%20I%20need%20help%20with%20a%20construction%20or%20material%20enquiry." aria-label="Chat with SKYLINE on WhatsApp">WhatsApp SKYLINE ↗</a><a class="toplink" href="#home" aria-label="Back to top">↑</a></div><footer class="footer"><div class="wrap"><span><b>SKYLINE CONSTRUCTION & TRADING</b> · Building with confidence.</span><span><a href="marketplace.html">Free Property Marketplace</a> · <a href="resources.html">Construction Resource Centre</a> · <a href="public-tools.html">Free Public Tools</a> · <a href="pakistan-guide.html">Pakistan Guide</a> · <a href="mailto:skyline44000.pk@gmail.com">Email us</a></span><span>© <span id="year"></span> SKYLINE. All rights reserved.</span></div></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}));}
+let installPrompt=null;const installBar=document.getElementById('appInstallBar');const installBtn=document.getElementById('installAppBtn');const dismissInstall=document.getElementById('dismissInstall');window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;installBar.style.display='flex';});installBtn.addEventListener('click',async()=>{if(!installPrompt)return;installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;installBar.style.display='none';});dismissInstall.addEventListener('click',()=>installBar.style.display='none');window.addEventListener('appinstalled',()=>installBar.style.display='none');
 document.getElementById('enquiryForm').addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('enqName').value.trim();const phone=document.getElementById('enqPhone').value.trim();const service=document.getElementById('enqService').value;const details=document.getElementById('enqDetails').value.trim();const msg='Assalam-o-Alaikum SKYLINE, I would like to make an enquiry.%0AName: '+encodeURIComponent(name)+'%0APhone: '+encodeURIComponent(phone)+'%0AService: '+encodeURIComponent(service)+'%0ADetails: '+encodeURIComponent(details);window.location.href='https://wa.me/923139826270?text='+msg;});</script>
 </body></html>
