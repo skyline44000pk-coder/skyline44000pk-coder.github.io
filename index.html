@@ -244,6 +244,20 @@ section{padding:108px 0}.section-head{margin-bottom:48px}.section-head h2{font-s
 .skyline-guide-cta a:hover{background:#e5cc9c;transform:translateY(-2px)}
 @media(max-width:640px){.skyline-guide-cta{margin:0 0 25px;padding:23px 20px;align-items:stretch;flex-direction:column}.skyline-guide-cta a{width:100%;box-sizing:border-box}}
 </style>
+<style id="skyline-silent-guide-css">
+.skyline-silent-guide{max-width:1120px;margin:36px auto;padding:26px;background:linear-gradient(130deg,#071827,#12314a);border:1px solid rgba(197,164,109,.55);color:#fff;box-shadow:0 18px 44px rgba(7,24,39,.14)}
+.skyline-silent-guide .ssg-kicker{font-size:10px;letter-spacing:2.5px;font-weight:800;color:#e5cc9c;text-transform:uppercase}
+.skyline-silent-guide h2{font:800 clamp(22px,3vw,30px) Manrope,sans-serif;color:#fff;margin:9px 0}
+.skyline-silent-guide .ssg-sub{font-size:12px;line-height:1.7;color:#c9d5df;margin:0 0 20px}
+.ssg-stage{position:relative;min-height:175px;border:1px solid rgba(229,204,156,.28);background:rgba(2,13,23,.35);padding:22px;display:flex;align-items:center;gap:20px;overflow:hidden}
+.ssg-number{width:62px;height:62px;flex:0 0 62px;border-radius:12px;background:#c5a46d;color:#071827;display:grid;place-items:center;font:800 28px Manrope}
+.ssg-copy{min-width:0}.ssg-copy b{display:block;font:800 19px Manrope;color:#fff;margin-bottom:8px}.ssg-copy p{margin:0;color:#d1dce5;font-size:14px;line-height:1.7}
+.ssg-step{display:none;animation:ssgIn .35s ease}.ssg-step.active{display:flex;align-items:center;gap:20px}
+@keyframes ssgIn{from{opacity:.25;transform:translateX(12px)}to{opacity:1;transform:translateX(0)}}
+.ssg-progress{height:5px;background:#34485a;margin-top:18px;overflow:hidden}.ssg-progress span{display:block;height:100%;width:0;background:#c5a46d;transition:width .25s}
+.ssg-controls{display:flex;align-items:center;gap:10px;margin-top:15px;flex-wrap:wrap}.ssg-controls button{border:1px solid rgba(229,204,156,.55);background:transparent;color:#fff;padding:10px 15px;font-weight:700;font-size:12px;cursor:pointer;border-radius:2px}.ssg-controls button.primary{background:#c5a46d;color:#071827;border-color:#c5a46d}.ssg-controls .ssg-status{margin-left:auto;color:#e5cc9c;font-size:11px;font-weight:700}
+@media(max-width:600px){.skyline-silent-guide{margin:24px 12px;padding:19px}.ssg-stage{padding:16px;min-height:190px}.ssg-step.active{align-items:flex-start;gap:13px}.ssg-number{width:46px;height:46px;flex-basis:46px;font-size:22px}.ssg-copy b{font-size:16px}.ssg-copy p{font-size:12px}.ssg-controls .ssg-status{width:100%;margin:2px 0 0}}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="wrap"><span>ISLAMABAD & RAWALPINDI · PAKISTAN</span><span>Call / WhatsApp: <a href="tel:+923139826270">+92 313 9826270</a></span></div></div>
@@ -350,7 +364,7 @@ section{padding:108px 0}.section-head{margin-bottom:48px}.section-head h2{font-s
 <div class="why-item"><b>Project-focused</b><span>Practical support shaped around your site and scope.</span></div>
 </div></div></section>
 <section class="skyline-guide-cta" aria-label="Free property posting"><div><div class="guide-kicker">SKYLINE PROPERTY MARKETPLACE</div><h2>Ready to share your property?</h2><p>Post a sale or rental listing for free. Add property details, your asking price and up to ten photos through the guided posting form. Our short video walkthrough is being finalized.</p></div><a href="marketplace.html#post-ad">POST YOUR PROPERTY FREE ↗</a></section>
-<section class="contact" id="contact"><div class="wrap"><div class="contact-box"><div class="contact-main"><div class="eyebrow">Get in touch</div><h2>Let's build something solid.</h2><p>Share your project details or material requirement. Contact SKYLINE for a conversation and quotation.</p><form class="enquiry-form" id="enquiryForm"><label>Your name<input id="enqName" name="name" autocomplete="name" required maxlength="80" placeholder="Enter your name"></label><label>Phone number<input id="enqPhone" name="phone" autocomplete="tel" inputmode="tel" required maxlength="30" placeholder="+92..."></label><label>What do you need?<select id="enqService" name="service" required><option value="">Select a service</option><option>Construction & civil works</option><option>Steel / Saria</option><option>Cement, bricks or blocks</option><option>Sand / crush / aggregates</option><option>Plumbing / electrical</option><option>Waterproofing / finishes</option><option>Property buying</option><option>Property selling</option><option>Property rent / lease</option><option>Sales & purchase assistance</option><option>Other enquiry</option></select></label><label>Project details<textarea id="enqDetails" name="details" maxlength="1200" placeholder="Site location, quantity, specifications and timeline"></textarea></label><button class="btn gold" type="submit">SEND ENQUIRY ON WHATSAPP ↗</button><p class="form-note">Your message will open in WhatsApp for you to review and send. No information is submitted to this website.</p></form></div><div class="contact-details">
+<section class="skyline-silent-guide" aria-label="Silent visual tutorial"><div class="ssg-kicker">SKYLINE VIDEO LEARNING · NO VOICE</div><h2>Use the SKYLINE homepage</h2><p class="ssg-sub">A silent, animated step-by-step walkthrough. Use Pause, Next or Replay to follow each action at your own pace.</p><div class="ssg-stage"><div class="ssg-step active"><div class="ssg-number">1</div><div class="ssg-copy"><b>Choose a quick action</b><p>Use the gold buttons to post a free property ad, browse listings or explore construction services.</p></div></div><div class="ssg-step"><div class="ssg-number">2</div><div class="ssg-copy"><b>Explore guides and services</b><p>Scroll through service cards, materials, project guides and public tools to find the right information.</p></div></div><div class="ssg-step"><div class="ssg-number">3</div><div class="ssg-copy"><b>Send your enquiry</b><p>Complete the contact form and review your message in WhatsApp before sending it to SKYLINE.</p></div></div></div><div class="ssg-progress"><span></span></div><div class="ssg-controls"><button class="primary" type="button" data-play>Pause</button><button type="button" data-next>Next step →</button><button type="button" data-restart>↻ Replay</button><span class="ssg-status">STEP 1 OF 3</span></div></section><section class="contact" id="contact"><div class="wrap"><div class="contact-box"><div class="contact-main"><div class="eyebrow">Get in touch</div><h2>Let's build something solid.</h2><p>Share your project details or material requirement. Contact SKYLINE for a conversation and quotation.</p><form class="enquiry-form" id="enquiryForm"><label>Your name<input id="enqName" name="name" autocomplete="name" required maxlength="80" placeholder="Enter your name"></label><label>Phone number<input id="enqPhone" name="phone" autocomplete="tel" inputmode="tel" required maxlength="30" placeholder="+92..."></label><label>What do you need?<select id="enqService" name="service" required><option value="">Select a service</option><option>Construction & civil works</option><option>Steel / Saria</option><option>Cement, bricks or blocks</option><option>Sand / crush / aggregates</option><option>Plumbing / electrical</option><option>Waterproofing / finishes</option><option>Property buying</option><option>Property selling</option><option>Property rent / lease</option><option>Sales & purchase assistance</option><option>Other enquiry</option></select></label><label>Project details<textarea id="enqDetails" name="details" maxlength="1200" placeholder="Site location, quantity, specifications and timeline"></textarea></label><button class="btn gold" type="submit">SEND ENQUIRY ON WHATSAPP ↗</button><p class="form-note">Your message will open in WhatsApp for you to review and send. No information is submitted to this website.</p></form></div><div class="contact-details">
 <div class="detail"><small>Call / WhatsApp</small><a href="tel:+923139826270">+92 313 9826270</a></div>
 <div class="detail"><small>Email</small><a href="mailto:skyline44000.pk@gmail.com">skyline44000.pk@gmail.com</a></div>
 <div class="detail"><small>Service area</small><span>Islamabad & Rawalpindi, Pakistan</span></div>
@@ -365,4 +379,18 @@ document.getElementById('enquiryForm').addEventListener('submit',function(e){e.p
 
 
 
+<script id="skyline-silent-guide-js">
+document.querySelectorAll('.skyline-silent-guide').forEach(function(box){
+ const steps=Array.from(box.querySelectorAll('.ssg-step'));if(!steps.length)return;
+ const bar=box.querySelector('.ssg-progress span'),status=box.querySelector('.ssg-status');
+ let current=0,playing=true,timer=null;
+ function show(n){current=(n+steps.length)%steps.length;steps.forEach((el,i)=>el.classList.toggle('active',i===current));bar.style.width=((current+1)/steps.length*100)+'%';status.textContent='STEP '+(current+1)+' OF '+steps.length;}
+ function stop(){if(timer)clearInterval(timer);timer=null;}
+ function start(){stop();playing=true;box.querySelector('[data-play]').textContent='Pause';timer=setInterval(()=>show(current+1),5200);}
+ box.querySelector('[data-play]').addEventListener('click',()=>{if(playing){stop();playing=false;box.querySelector('[data-play]').textContent='Play'}else start()});
+ box.querySelector('[data-next]').addEventListener('click',()=>show(current+1));
+ box.querySelector('[data-restart]').addEventListener('click',()=>{show(0);start()});
+ show(0);start();
+});
+</script>
 </body></html>
