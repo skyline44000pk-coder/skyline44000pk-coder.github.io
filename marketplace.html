@@ -15,12 +15,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
+
 :root{--navy:#081827;--gold:#c5a46d;--gold2:#e5cc9c;--ink:#172838;--muted:#66727c;--paper:#f4f2ed;--line:#e6e1d8}*{box-sizing:border-box}body{margin:0;font-family:"DM Sans",sans-serif;color:var(--ink);background:#fff}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 32px));margin:auto}header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:5}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font:800 16px Manrope;letter-spacing:2px}.brand small{display:block;font:600 9px "DM Sans";color:var(--gold2);letter-spacing:2px;margin-top:4px}.navlinks{display:flex;gap:20px;font-size:12px;color:#e5eaf0}.btn{border:0;border-radius:3px;background:var(--gold);color:var(--navy);padding:13px 18px;font-weight:800;font-size:12px;cursor:pointer}.hero{background:linear-gradient(100deg,#061522f2,#102d43d9),url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85") center/cover;color:white;padding:72px 0}.eyebrow{color:var(--gold2);font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase}.hero h1{font:800 clamp(34px,6vw,64px)/1.08 Manrope;margin:16px 0;letter-spacing:-2px}.hero p{max-width:680px;color:#d4dde5;line-height:1.8}.heroactions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.featurebar{background:#fff9eb;border-top:1px solid #ead8b2;border-bottom:1px solid #ead8b2;padding:17px 0}.featuregrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.feature{display:flex;align-items:center;gap:11px;color:#49391f;font-size:13px;font-weight:800}.feature strong{display:block;color:#8b682e;font:800 11px Manrope;letter-spacing:.6px}.featureicon{width:36px;height:36px;display:grid;place-items:center;background:#ead8b2;border-radius:50%;font-size:18px;flex:0 0 36px}.section{padding:54px 0}.sectionhead{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}.sectionhead h2{font:800 clamp(26px,4vw,38px) Manrope;margin:8px 0}.muted{color:var(--muted);line-height:1.7;font-size:13px}.filters,.panel{background:var(--paper);border:1px solid var(--line);padding:20px;border-radius:4px}.filters{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:10px;margin-bottom:20px}.field{display:grid;gap:6px;font-size:11px;font-weight:700}.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid #cbd3da;background:white;border-radius:3px;font:14px "DM Sans";color:var(--ink)}.field textarea{min-height:110px;resize:vertical}.photo-upload{grid-column:1/-1;display:block;padding:18px;border:2px dashed #b89a68;border-radius:8px;background:#fffaf1}.photo-upload .upload-title{display:block;font:800 15px Manrope;color:#172838;margin-bottom:6px}.photo-upload .upload-help{display:block;color:#66727c;font-size:12px;line-height:1.6;margin-bottom:12px}.photo-upload input[type=file]{display:block;width:100%;padding:12px;background:#fff;border:1px solid #d8c9ad;border-radius:5px;font-size:13px}.photo-upload input[type=file]::file-selector-button{background:#081827;color:#fff;border:0;border-radius:4px;padding:11px 15px;margin-right:12px;font-weight:800;cursor:pointer}.photo-preview{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:9px;margin-top:12px}.photo-preview figure{margin:0;border:1px solid #e6e1d8;border-radius:5px;overflow:hidden;background:#fff}.photo-preview img{width:100%;height:78px;object-fit:cover;display:block}.photo-preview figcaption{padding:5px;font-size:10px;overflow-wrap:anywhere;color:#66727c}.listings{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.listing{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:white}.listing img{width:100%;height:190px;object-fit:cover;background:#e7ebee}.listing-gallery{background:#eef1f3}.listing-gallery .listing-main{width:100%;height:210px;object-fit:cover;display:block}.listing-thumbs{display:flex;gap:7px;padding:9px;overflow-x:auto}.listing-thumbs button{border:2px solid transparent;padding:0;background:none;flex:0 0 62px;height:52px;border-radius:4px;overflow:hidden;cursor:pointer}.listing-thumbs button[aria-pressed=true]{border-color:var(--gold)}.listing-thumbs img{width:100%;height:100%;object-fit:cover;display:block}.listingbody{padding:16px}.listing h3{font:700 17px Manrope;margin:0 0 8px}.price{font:800 20px Manrope;color:#8b682e;margin:8px 0}.meta{font-size:12px;color:var(--muted);line-height:1.7}.tag{display:inline-block;background:#f4f0e7;color:#72582e;padding:5px 8px;font-size:10px;font-weight:800;letter-spacing:.5px;margin:0 5px 8px 0}.listingactions{display:flex;gap:8px;margin-top:14px}.listingactions a{flex:1;text-align:center;padding:10px;background:var(--navy);color:white;font-size:11px;font-weight:800;border-radius:2px}.empty{grid-column:1/-1;padding:35px;text-align:center;border:1px dashed #c9c3b7;color:var(--muted)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.full{grid-column:1/-1}.panel h2{font:800 28px Manrope;margin:8px 0}.consent{display:flex;gap:10px;align-items:flex-start;font-size:12px;color:var(--muted);line-height:1.6}.consent input{margin-top:3px}.notice{padding:14px;background:#fff9eb;border:1px solid #ead8b2;color:#6b5734;font-size:12px;line-height:1.7;margin:14px 0}.status{font-size:12px;font-weight:700;margin-top:12px}.footer{background:#04111e;color:#b8c4ce;padding:26px 0;font-size:11px}.footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.hidden{display:none!important}
 @media(max-width:800px){.listings{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:1fr 1fr}.navlinks{gap:10px;flex-wrap:wrap;justify-content:flex-end}}
 @media(max-width:560px){.featuregrid{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column;padding:14px 0}.navlinks{justify-content:flex-start}.hero{padding:58px 0}.listings{grid-template-columns:1fr}.filters,.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.section{padding:38px 0}.sectionhead{display:block}}
-</style><style>#appInstallBar{position:fixed;left:14px;right:14px;bottom:14px;z-index:99;display:none;align-items:center;justify-content:space-between;gap:12px;padding:13px 15px;background:#081827;color:#fff;border:1px solid #c5a46d;border-radius:12px;box-shadow:0 8px 30px #0003;font:600 13px Arial}#appInstallBar button{border:0;border-radius:7px;background:#c5a46d;color:#081827;padding:10px 14px;font-weight:800}#appInstallBar .dismiss{background:transparent;color:#fff;padding:4px 8px;font-size:18px}</style>
 
-<style id="skyline-marketplace-prominence-upgrade">
+#appInstallBar{position:fixed;left:14px;right:14px;bottom:14px;z-index:99;display:none;align-items:center;justify-content:space-between;gap:12px;padding:13px 15px;background:#081827;color:#fff;border:1px solid #c5a46d;border-radius:12px;box-shadow:0 8px 30px #0003;font:600 13px Arial}#appInstallBar button{border:0;border-radius:7px;background:#c5a46d;color:#081827;padding:10px 14px;font-weight:800}#appInstallBar .dismiss{background:transparent;color:#fff;padding:4px 8px;font-size:18px}
+
 /* SKYLINE marketplace action clarity and mobile polish */
 .hero{position:relative;overflow:hidden}.hero:after{content:"";position:absolute;right:-100px;bottom:-230px;width:460px;height:460px;border:1px solid #e5cc9c55;border-radius:50%;box-shadow:0 0 0 35px #e5cc9c0c,0 0 0 75px #e5cc9c0a;pointer-events:none}
 .hero .wrap{position:relative;z-index:1}.heroactions{gap:12px}.heroactions .btn:first-child{background:#e5cc9c;color:#081827;box-shadow:0 8px 22px #0003}.heroactions .btn:last-child{border:1px solid #e5cc9c;color:#fff;background:#ffffff0b}
@@ -34,8 +35,8 @@
 #post-ad .upload-title{font:800 15px Manrope;color:#081827}
 #post-ad .btn{box-shadow:0 8px 22px #c5a46d44;transition:transform .2s,box-shadow .2s}#post-ad .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px #c5a46d55}
 @media(max-width:680px){.hero{padding-top:55px;padding-bottom:55px}.heroactions{display:grid;grid-template-columns:1fr}.heroactions .btn{width:100%;justify-content:center}.featuregrid{grid-template-columns:1fr;gap:8px}.feature{padding:12px 14px;min-height:65px}#browse .filters{padding:13px}}
-</style>
-<style id="skyline-silent-guide-css">
+
+
 .skyline-silent-guide{max-width:1120px;margin:36px auto;padding:26px;background:linear-gradient(130deg,#071827,#12314a);border:1px solid rgba(197,164,109,.55);color:#fff;box-shadow:0 18px 44px rgba(7,24,39,.14)}
 .skyline-silent-guide .ssg-kicker{font-size:10px;letter-spacing:2.5px;font-weight:800;color:#e5cc9c;text-transform:uppercase}
 .skyline-silent-guide h2{font:800 clamp(22px,3vw,30px) Manrope,sans-serif;color:#fff;margin:9px 0}
@@ -48,8 +49,8 @@
 .ssg-progress{height:5px;background:#34485a;margin-top:18px;overflow:hidden}.ssg-progress span{display:block;height:100%;width:0;background:#c5a46d;transition:width .25s}
 .ssg-controls{display:flex;align-items:center;gap:10px;margin-top:15px;flex-wrap:wrap}.ssg-controls button{border:1px solid rgba(229,204,156,.55);background:transparent;color:#fff;padding:10px 15px;font-weight:700;font-size:12px;cursor:pointer;border-radius:2px}.ssg-controls button.primary{background:#c5a46d;color:#071827;border-color:#c5a46d}.ssg-controls .ssg-status{margin-left:auto;color:#e5cc9c;font-size:11px;font-weight:700}
 @media(max-width:600px){.skyline-silent-guide{margin:24px 12px;padding:19px}.ssg-stage{padding:16px;min-height:190px}.ssg-step.active{align-items:flex-start;gap:13px}.ssg-number{width:46px;height:46px;flex-basis:46px;font-size:22px}.ssg-copy b{font-size:16px}.ssg-copy p{font-size:12px}.ssg-controls .ssg-status{width:100%;margin:2px 0 0}}
-</style>
-<style id="skyline-mobile-repair">
+
+
 
 /* SKYLINE responsive repair — shared mobile layout */
 *,*::before,*::after{box-sizing:border-box}
@@ -98,20 +99,36 @@ button,input,select,textarea{max-width:100%;font:inherit}
   .start-panel,.film-shell,.scf-shell{padding:15px!important}
 }
 
-</style>
-<style id="skyline-demo-listing-style">
+
+
 .listing-demo{border-color:#d5bd8b;box-shadow:0 8px 22px rgba(10,30,48,.08)}
 .demo-tag{display:block!important;width:max-content;max-width:100%;background:#fff2d5!important;color:#72521d!important;border:1px solid #e5c98f}
 .demo-note{margin-top:14px;padding:10px 12px;border-radius:5px;background:#f5f3ed;color:#6d6555;font-size:11px;line-height:1.5;font-weight:700}
 @media(max-width:560px){.listings{grid-template-columns:minmax(0,1fr)!important}.listing .listing-main{height:205px!important}.listingbody{padding:14px}}
-</style>
-<style id="skyline-purpose-tabs-css">
+
+
 .purpose-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 14px}
 .purpose-tab{appearance:none;border:1px solid #d6c49f;background:#fff;color:#14263a;border-radius:999px;padding:11px 20px;font:800 13px Manrope,system-ui;cursor:pointer;transition:.18s}
 .purpose-tab.active,.purpose-tab[aria-pressed=true]{background:#10243a;color:#f3d99e;border-color:#10243a;box-shadow:0 5px 14px rgba(12,30,48,.14)}
 .purpose-tab:focus-visible{outline:3px solid #d4b16a;outline-offset:2px}
 @media(max-width:560px){.purpose-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.purpose-tab{padding:11px 5px;font-size:11px}}
+
+
+.skyline-tutorial{margin:34px auto 28px;max-width:1120px;padding:22px 24px;border:1px solid rgba(201,164,92,.38);border-radius:18px;background:linear-gradient(135deg,#101d32,#172944);color:#fff;display:flex;gap:18px;align-items:center;justify-content:space-between;box-shadow:0 12px 30px rgba(8,20,38,.12)}
+.skyline-tutorial .st-copy{min-width:0}.skyline-tutorial .st-kicker{color:#d7b36b;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}.skyline-tutorial h2{margin:5px 0 6px;color:#fff;font-size:clamp(18px,2.4vw,25px)}.skyline-tutorial p{margin:0;color:#d5deea;font-size:14px;line-height:1.55}.skyline-tutorial .st-btn{display:inline-flex;align-items:center;gap:9px;flex-shrink:0;padding:12px 17px;border-radius:999px;background:#d7b36b;color:#172235;text-decoration:none;font-weight:800;font-size:13px}.skyline-tutorial .st-btn:hover{background:#f0cf8b;transform:translateY(-1px)}.skyline-tutorial .st-play{width:28px;height:28px;border-radius:50%;background:#172235;color:#f5d58e;display:inline-grid;place-items:center;font-size:12px}
+@media(max-width:640px){.skyline-tutorial{margin:22px 12px;padding:18px;align-items:flex-start;flex-direction:column}.skyline-tutorial .st-btn{width:100%;justify-content:center;box-sizing:border-box}}
+
+
+
+/* Unified SKYLINE modern finish */
+:root{--skyline-radius:8px}html{scroll-behavior:smooth}body{line-height:1.65}header{box-shadow:0 5px 22px rgba(4,17,30,.08)}.btn,.cta,.navcta,.nav-cta,button{border-radius:5px}input,select,textarea{border-radius:5px}img{max-width:100%}.card,.service,.material,.listing,.panel,.formbox,.calc-card,.notice,.step{border-radius:8px}.card:hover,.service:hover,.material:hover,.listing:hover{box-shadow:0 14px 34px rgba(8,24,39,.10)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--gold,#c5a46d);outline-offset:3px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 </style>
+
+
+
+
+
+
 </head><body>
 <header><div class="wrap nav"><a class="brand" href="index.html">SKYLINE<small>CONSTRUCTION & TRADING</small></a><nav class="navlinks"><a href="index.html">Home</a><a href="properties.html">Property Services</a><a href="pakistan-guide.html#society-check">Society Checker</a><a href="resources.html">Construction Rates</a></nav><a class="btn" href="#post-ad">POST FREE AD</a></div></header>
 <main>
@@ -187,11 +204,7 @@ const {error}=await client.from("property_listings").insert(payload);if(error)th
 finally{btn.disabled=false;btn.textContent="SUBMIT FREE PROPERTY AD";}});
 load();
 </script>
-<style>
-.skyline-tutorial{margin:34px auto 28px;max-width:1120px;padding:22px 24px;border:1px solid rgba(201,164,92,.38);border-radius:18px;background:linear-gradient(135deg,#101d32,#172944);color:#fff;display:flex;gap:18px;align-items:center;justify-content:space-between;box-shadow:0 12px 30px rgba(8,20,38,.12)}
-.skyline-tutorial .st-copy{min-width:0}.skyline-tutorial .st-kicker{color:#d7b36b;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}.skyline-tutorial h2{margin:5px 0 6px;color:#fff;font-size:clamp(18px,2.4vw,25px)}.skyline-tutorial p{margin:0;color:#d5deea;font-size:14px;line-height:1.55}.skyline-tutorial .st-btn{display:inline-flex;align-items:center;gap:9px;flex-shrink:0;padding:12px 17px;border-radius:999px;background:#d7b36b;color:#172235;text-decoration:none;font-weight:800;font-size:13px}.skyline-tutorial .st-btn:hover{background:#f0cf8b;transform:translateY(-1px)}.skyline-tutorial .st-play{width:28px;height:28px;border-radius:50%;background:#172235;color:#f5d58e;display:inline-grid;place-items:center;font-size:12px}
-@media(max-width:640px){.skyline-tutorial{margin:22px 12px;padding:18px;align-items:flex-start;flex-direction:column}.skyline-tutorial .st-btn{width:100%;justify-content:center;box-sizing:border-box}}
-</style>
+
 <section class="skyline-silent-guide" aria-label="Silent visual tutorial"><div class="ssg-kicker">SKYLINE VIDEO LEARNING · NO VOICE</div><h2>Post a free property ad</h2><p class="ssg-sub">A silent, animated step-by-step walkthrough. Use Pause, Next or Replay to follow each action at your own pace.</p><div class="ssg-stage"><div class="ssg-step active"><div class="ssg-number">1</div><div class="ssg-copy"><b>Open Post your property</b><p>Choose whether the listing is for sale or rent and add a clear property title.</p></div></div><div class="ssg-step"><div class="ssg-number">2</div><div class="ssg-copy"><b>Complete property details</b><p>Select property type, city, area, size, asking price and write a useful description.</p></div></div><div class="ssg-step"><div class="ssg-number">3</div><div class="ssg-copy"><b>Add photos and submit</b><p>Upload up to 10 clear photos, submit the listing and check your published ad.</p></div></div></div><div class="ssg-progress"><span></span></div><div class="ssg-controls"><button class="primary" type="button" data-play>Pause</button><button type="button" data-next>Next step →</button><button type="button" data-restart>↻ Replay</button><span class="ssg-status">STEP 1 OF 3</span></div></section>
 <script id="skyline-silent-guide-js">
 document.querySelectorAll('.skyline-silent-guide').forEach(function(box){
@@ -208,21 +221,7 @@ document.querySelectorAll('.skyline-silent-guide').forEach(function(box){
 });
 </script>
 
-<style id="skyline-feature-dock-css">
-body{padding-bottom:88px}
-.skyline-feature-dock{position:fixed;z-index:99999;left:50%;bottom:calc(10px + env(safe-area-inset-bottom));transform:translateX(-50%);width:min(720px,calc(100% - 28px));display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;padding:8px;background:rgba(9,22,42,.96);border:1px solid rgba(212,177,103,.42);border-radius:18px;box-shadow:0 12px 38px rgba(0,0,0,.28);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
-.skyline-feature-dock a{min-width:0;min-height:54px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border-radius:12px;color:#f8f5ed;text-decoration:none;font:700 10px/1.15 system-ui,sans-serif;text-align:center;padding:5px 3px;transition:background .18s ease,color .18s ease}
-.skyline-feature-dock a:hover,.skyline-feature-dock a:focus-visible{background:rgba(214,177,105,.2);color:#f2d49a;outline:2px solid #d6b169;outline-offset:1px}
-.skyline-feature-dock .sfd-icon{font-size:19px;line-height:1.1}
-.skyline-feature-dock a.sfd-primary{background:linear-gradient(135deg,#d9b66e,#f0d79e);color:#17253a}
-@media(max-width:420px){body{padding-bottom:82px}.skyline-feature-dock{width:calc(100% - 14px);bottom:calc(6px + env(safe-area-inset-bottom));gap:3px;padding:6px;border-radius:15px}.skyline-feature-dock a{min-height:50px;font-size:8px;padding:4px 1px}.skyline-feature-dock .sfd-icon{font-size:17px}}
-</style>
-<nav class="skyline-feature-dock" aria-label="SKYLINE main features">
-<a href="index.html"><span class="sfd-icon" aria-hidden="true">⌂</span><span>Home</span></a>
-<a class="sfd-primary" href="marketplace.html#post-ad"><span class="sfd-icon" aria-hidden="true">＋</span><span>Free Ad</span></a>
-<a href="properties.html"><span class="sfd-icon" aria-hidden="true">⌕</span><span>Properties</span></a>
-<a href="public-tools.html"><span class="sfd-icon" aria-hidden="true">▦</span><span>Calculators</span></a>
-<a href="pakistan-guide.html#society-check"><span class="sfd-icon" aria-hidden="true">✓</span><span>Society Check</span></a>
-</nav>
+
+
 
 </body></html>
