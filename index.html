@@ -59,7 +59,34 @@ section{padding:100px 0}.section-head{max-width:650px;margin-bottom:42px}.sectio
 .material img{display:block;width:100%;height:132px;object-fit:cover;border-radius:3px;margin-bottom:17px;background:#e8edf1}
 .process .material img{height:145px}
 @media(max-width:540px){.photo{height:190px}.material img{height:125px}}
+
+/* Conversion, accessibility and responsive polish */
+html{scroll-padding-top:96px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+.enquiry-form{display:grid;gap:12px;margin-top:22px}
+.enquiry-form label{display:grid;gap:6px;color:var(--ink);font-size:12px;font-weight:700}
+.enquiry-form input,.enquiry-form select,.enquiry-form textarea{width:100%;padding:12px;border:1px solid #cbd5df;border-radius:4px;font:500 14px "DM Sans",sans-serif;background:#fff;color:var(--ink)}
+.enquiry-form textarea{min-height:105px;resize:vertical}
+.enquiry-form button{border:0;cursor:pointer}
+.form-note{font-size:11px;color:var(--muted);line-height:1.6}
+.faq-list{display:grid;gap:12px}
+.faq-list details{border:1px solid var(--line);border-radius:5px;padding:18px 20px;background:#fff}
+.faq-list summary{cursor:pointer;font:700 15px Manrope;color:var(--navy)}
+.faq-list details p{color:var(--muted);font-size:13px;line-height:1.8;margin:12px 0 0}
+.quick-actions{position:fixed;right:18px;bottom:18px;z-index:50;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.quick-actions a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 16px;border-radius:28px;background:#137b48;color:#fff;font-size:12px;font-weight:800;box-shadow:0 8px 28px #071a2d35}
+.quick-actions a.toplink{background:var(--navy);width:46px;min-height:46px;padding:0;font-size:18px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+@media(max-width:540px){.quick-actions{right:12px;bottom:12px}.quick-actions a:not(.toplink){min-height:44px;padding:0 13px}}
 </style>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Which areas do you serve?","acceptedAnswer":{"@type":"Answer","text":"SKYLINE lists Islamabad and Rawalpindi, Pakistan as its service areas."}},
+{"@type":"Question","name":"Can I request a material quotation?","acceptedAnswer":{"@type":"Answer","text":"Yes. Send the material name, required grade or specifications, quantity and delivery location to request availability and quotation details."}},
+{"@type":"Question","name":"What information should I share for construction work?","acceptedAnswer":{"@type":"Answer","text":"Share the site location, type of work, approximate measurements, project stage, drawings or photos if available, and your expected timeline."}}
+]}
+</script>
 </head>
 <body>
 <div class="topbar"><div class="wrap"><span>ISLAMABAD & RAWALPINDI · PAKISTAN</span><span>Call / WhatsApp: <a href="tel:+923139826270">+92 313 9826270</a></span></div></div>
@@ -113,11 +140,11 @@ section{padding:100px 0}.section-head{max-width:650px;margin-bottom:42px}.sectio
 <div class="material"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=700&q=80" alt="Review construction materials" loading="lazy"><div class="line"></div><b>3. Review options</b><span>Talk through suitable options, availability and quotation details.</span></div>
 <div class="material"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" alt="Coordinate construction delivery and next steps" loading="lazy"><div class="line"></div><b>4. Coordinate next steps</b><span>Agree on the next steps and communication for your requirement.</span></div>
 </div></div></section>
-<section class="faq"><div class="wrap"><div class="section-head"><div class="eyebrow">Frequently asked questions</div><h2>Helpful information before you contact us.</h2></div>
-<div class="cards">
-<article class="service"><h3>Which areas do you serve?</h3><p>SKYLINE lists Islamabad and Rawalpindi, Pakistan as its service areas. Share your exact site location so the requirement can be discussed.</p></article>
-<article class="service"><h3>Can I request a material quotation?</h3><p>Yes. Send the material name, required grade or specifications, quantity and delivery location to request availability and quotation details.</p></article>
-<article class="service"><h3>What information should I share for construction work?</h3><p>Share the site location, type of work, approximate measurements, project stage, drawings or photos if available, and your expected timeline.</p></article>
+<section class="faq"><div class="wrap"><div class="section-head"><div class="eyebrow">Frequently asked questions</div><h2>Helpful information before you contact us.</h2><p>Quick answers about our service area, quotations and project requirements.</p></div>
+<div class="faq-list">
+<details><summary>Which areas do you serve?</summary><p>SKYLINE lists Islamabad and Rawalpindi, Pakistan as its service areas. Share your exact site location so the requirement can be discussed.</p></details>
+<details><summary>Can I request a material quotation?</summary><p>Yes. Send the material name, required grade or specifications, quantity and delivery location to request availability and quotation details.</p></details>
+<details><summary>What information should I share for construction work?</summary><p>Share the site location, type of work, approximate measurements, project stage, drawings or photos if available, and your expected timeline.</p></details>
 </div></div></section>
 <section class="why"><div class="wrap why-grid"><div><div class="eyebrow">The SKYLINE approach</div><h2>Good work starts with the right partner.</h2><p>Every project has its own needs. We aim to make the process simpler through responsive communication, local coordination and a practical understanding of construction requirements.</p><a class="btn gold" href="https://wa.me/923139826270">LET'S START A CONVERSATION ↗</a></div><div class="why-list">
 <div class="why-item"><b>Responsive coordination</b><span>Speak directly with our team about your requirement.</span></div>
@@ -125,12 +152,13 @@ section{padding:100px 0}.section-head{max-width:650px;margin-bottom:42px}.sectio
 <div class="why-item"><b>Material options</b><span>Discuss brands, quality, quantities and availability.</span></div>
 <div class="why-item"><b>Project-focused</b><span>Practical support shaped around your site and scope.</span></div>
 </div></div></section>
-<section class="contact" id="contact"><div class="wrap"><div class="contact-box"><div class="contact-main"><div class="eyebrow">Get in touch</div><h2>Let's build something solid.</h2><p>Share your project details or material requirement. Contact SKYLINE for a conversation and quotation.</p><a class="btn gold" href="https://wa.me/923139826270?text=Assalam-o-Alaikum%2C%20I%20want%20to%20contact%20SKYLINE.">WHATSAPP US ↗</a></div><div class="contact-details">
+<section class="contact" id="contact"><div class="wrap"><div class="contact-box"><div class="contact-main"><div class="eyebrow">Get in touch</div><h2>Let's build something solid.</h2><p>Share your project details or material requirement. Contact SKYLINE for a conversation and quotation.</p><form class="enquiry-form" id="enquiryForm"><label>Your name<input id="enqName" name="name" autocomplete="name" required maxlength="80" placeholder="Enter your name"></label><label>Phone number<input id="enqPhone" name="phone" autocomplete="tel" inputmode="tel" required maxlength="30" placeholder="+92..."></label><label>What do you need?<select id="enqService" name="service" required><option value="">Select a service</option><option>Construction & civil works</option><option>Steel / Saria</option><option>Cement, bricks or blocks</option><option>Sand / crush / aggregates</option><option>Plumbing / electrical</option><option>Waterproofing / finishes</option><option>Sales & purchase assistance</option><option>Other enquiry</option></select></label><label>Project details<textarea id="enqDetails" name="details" maxlength="1200" placeholder="Site location, quantity, specifications and timeline"></textarea></label><button class="btn gold" type="submit">SEND ENQUIRY ON WHATSAPP ↗</button><p class="form-note">Your message will open in WhatsApp for you to review and send. No information is submitted to this website.</p></form></div><div class="contact-details">
 <div class="detail"><small>Call / WhatsApp</small><a href="tel:+923139826270">+92 313 9826270</a></div>
 <div class="detail"><small>Email</small><a href="mailto:skyline44000.pk@gmail.com">skyline44000.pk@gmail.com</a></div>
 <div class="detail"><small>Service area</small><span>Islamabad & Rawalpindi, Pakistan</span></div>
 </div></div></div></section>
 </main>
-<footer class="footer"><div class="wrap"><span><b>SKYLINE CONSTRUCTION & TRADING</b> · Building with confidence.</span><span>© <span id="year"></span> SKYLINE. All rights reserved.</span></div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<div class="quick-actions" aria-label="Quick contact"><a href="https://wa.me/923139826270?text=Assalam-o-Alaikum%2C%20I%20need%20help%20with%20a%20construction%20or%20material%20enquiry." aria-label="Chat with SKYLINE on WhatsApp">WhatsApp SKYLINE ↗</a><a class="toplink" href="#home" aria-label="Back to top">↑</a></div><footer class="footer"><div class="wrap"><span><b>SKYLINE CONSTRUCTION & TRADING</b> · Building with confidence.</span><span><a href="resources.html">Construction Resource Centre</a> · <a href="mailto:skyline44000.pk@gmail.com">Email us</a></span><span>© <span id="year"></span> SKYLINE. All rights reserved.</span></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('enquiryForm').addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('enqName').value.trim();const phone=document.getElementById('enqPhone').value.trim();const service=document.getElementById('enqService').value;const details=document.getElementById('enqDetails').value.trim();const msg='Assalam-o-Alaikum SKYLINE, I would like to make an enquiry.%0AName: '+encodeURIComponent(name)+'%0APhone: '+encodeURIComponent(phone)+'%0AService: '+encodeURIComponent(service)+'%0ADetails: '+encodeURIComponent(details);window.location.href='https://wa.me/923139826270?text='+msg;});</script>
 </body></html>
