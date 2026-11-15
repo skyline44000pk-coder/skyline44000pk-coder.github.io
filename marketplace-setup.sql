@@ -1,6 +1,6 @@
 -- SKYLINE free property marketplace: run this in Supabase SQL Editor.
--- Public visitors can submit pending ads and read approved ads only.
--- Only a trusted administrator should change status from pending to approved.
+-- Public visitors can submit ads that become visible immediately.
+-- Automatic publishing increases spam and scam risk; monitor listings regularly.
 create extension if not exists pgcrypto;
 
 create table if not exists public.property_listings (
@@ -31,9 +31,10 @@ on public.property_listings for select to anon, authenticated
 using (status = 'approved');
 
 drop policy if exists "Public can submit pending property ads" on public.property_listings;
-create policy "Public can submit pending property ads"
+drop policy if exists "Public can publish property ads immediately" on public.property_listings;
+create policy "Public can publish property ads immediately"
 on public.property_listings for insert to anon, authenticated
-with check (status = 'pending');
+with check (status = 'approved');
 
 create index if not exists property_listings_browse_idx
 on public.property_listings (status, city, purpose, created_at desc);
@@ -54,6 +55,6 @@ create policy "Anyone can view property photos"
 on storage.objects for select to anon, authenticated
 using (bucket_id = 'property-photos');
 
--- Moderation: in Supabase Table Editor, open property_listings.
--- Review each pending row and set status to 'approved' or 'rejected'.
+-- Ads submitted through the website are published immediately without manual approval.
+-- Monitor the table regularly and remove fraudulent or misleading ads.
 -- Do not expose any secret/service_role key in marketplace.html.
