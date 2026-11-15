@@ -1,0 +1,24 @@
+{
+  "id": "/",
+  "name": "skylines.com",
+  "short_name": "skylines.com",
+  "description": "Find, buy, sell and rent property across Pakistan.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#071a2d",
+  "theme_color": "#071a2d",
+  "categories": [
+    "business",
+    "lifestyle"
+  ],
+  "icons": [
+    {
+      "src": "/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
