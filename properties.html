@@ -24,6 +24,20 @@
 button,.btn,a.btn{transition:transform .18s,box-shadow .18s}a.btn:hover,button:hover{transform:translateY(-1px)}
 @media(max-width:700px){.skyline-section-nav-inner{padding:0 14px;min-height:45px;gap:3px}.skyline-section-nav a{font-size:9px;padding:8px 9px}.hero:after{width:270px;height:270px;right:-150px;bottom:-160px}.toc,.quick{gap:6px}.toc a,.quick a{font-size:11px;padding:8px 10px}}
 </style>
+<style id="skyline-silent-guide-css">
+.skyline-silent-guide{max-width:1120px;margin:36px auto;padding:26px;background:linear-gradient(130deg,#071827,#12314a);border:1px solid rgba(197,164,109,.55);color:#fff;box-shadow:0 18px 44px rgba(7,24,39,.14)}
+.skyline-silent-guide .ssg-kicker{font-size:10px;letter-spacing:2.5px;font-weight:800;color:#e5cc9c;text-transform:uppercase}
+.skyline-silent-guide h2{font:800 clamp(22px,3vw,30px) Manrope,sans-serif;color:#fff;margin:9px 0}
+.skyline-silent-guide .ssg-sub{font-size:12px;line-height:1.7;color:#c9d5df;margin:0 0 20px}
+.ssg-stage{position:relative;min-height:175px;border:1px solid rgba(229,204,156,.28);background:rgba(2,13,23,.35);padding:22px;display:flex;align-items:center;gap:20px;overflow:hidden}
+.ssg-number{width:62px;height:62px;flex:0 0 62px;border-radius:12px;background:#c5a46d;color:#071827;display:grid;place-items:center;font:800 28px Manrope}
+.ssg-copy{min-width:0}.ssg-copy b{display:block;font:800 19px Manrope;color:#fff;margin-bottom:8px}.ssg-copy p{margin:0;color:#d1dce5;font-size:14px;line-height:1.7}
+.ssg-step{display:none;animation:ssgIn .35s ease}.ssg-step.active{display:flex;align-items:center;gap:20px}
+@keyframes ssgIn{from{opacity:.25;transform:translateX(12px)}to{opacity:1;transform:translateX(0)}}
+.ssg-progress{height:5px;background:#34485a;margin-top:18px;overflow:hidden}.ssg-progress span{display:block;height:100%;width:0;background:#c5a46d;transition:width .25s}
+.ssg-controls{display:flex;align-items:center;gap:10px;margin-top:15px;flex-wrap:wrap}.ssg-controls button{border:1px solid rgba(229,204,156,.55);background:transparent;color:#fff;padding:10px 15px;font-weight:700;font-size:12px;cursor:pointer;border-radius:2px}.ssg-controls button.primary{background:#c5a46d;color:#071827;border-color:#c5a46d}.ssg-controls .ssg-status{margin-left:auto;color:#e5cc9c;font-size:11px;font-weight:700}
+@media(max-width:600px){.skyline-silent-guide{margin:24px 12px;padding:19px}.ssg-stage{padding:16px;min-height:190px}.ssg-step.active{align-items:flex-start;gap:13px}.ssg-number{width:46px;height:46px;flex-basis:46px;font-size:22px}.ssg-copy b{font-size:16px}.ssg-copy p{font-size:12px}.ssg-controls .ssg-status{width:100%;margin:2px 0 0}}
+</style>
 </head><body>
 <header><div class="wrap nav"><a class="brand" href="index.html">SKYLINE<small>CONSTRUCTION & TRADING</small></a><nav class="links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="materials-guide.html">Materials</a><a href="project-guide.html">Project Guide</a><a href="resources.html">Tools & Updates</a><a href="marketplace.html">Free Property Marketplace</a><a href="#enquiry">Property Enquiry</a></nav><a class="cta" href="#enquiry">SUBMIT REQUIREMENT ↗</a></div></header>
 <div class="skyline-section-nav" aria-label="Explore SKYLINE sections"><div class="skyline-section-nav-inner"><a href="index.html">Home</a><a href="marketplace.html">Free Property Ads</a><a href="properties.html">Property Services</a><a href="public-tools.html">Free Tools</a><a href="pakistan-guide.html">Pakistan Guide</a><a href="services.html">Construction</a><a href="materials-guide.html">Materials</a><a href="project-guide.html">Project Planning</a><a href="resources.html">Resources</a></div></div>
@@ -66,5 +80,19 @@ document.getElementById('propertyForm').addEventListener('submit',function(e){e.
 .skyline-tutorial .st-copy{min-width:0}.skyline-tutorial .st-kicker{color:#d7b36b;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}.skyline-tutorial h2{margin:5px 0 6px;color:#fff;font-size:clamp(18px,2.4vw,25px)}.skyline-tutorial p{margin:0;color:#d5deea;font-size:14px;line-height:1.55}.skyline-tutorial .st-btn{display:inline-flex;align-items:center;gap:9px;flex-shrink:0;padding:12px 17px;border-radius:999px;background:#d7b36b;color:#172235;text-decoration:none;font-weight:800;font-size:13px}.skyline-tutorial .st-btn:hover{background:#f0cf8b;transform:translateY(-1px)}.skyline-tutorial .st-play{width:28px;height:28px;border-radius:50%;background:#172235;color:#f5d58e;display:inline-grid;place-items:center;font-size:12px}
 @media(max-width:640px){.skyline-tutorial{margin:22px 12px;padding:18px;align-items:flex-start;flex-direction:column}.skyline-tutorial .st-btn{width:100%;justify-content:center;box-sizing:border-box}}
 </style>
-<section class="skyline-tutorial" id="skyline-video-tutorial" aria-label="English video tutorials"><div class="st-copy"><div class="st-kicker">SKYLINE VIDEO LEARNING</div><h2>Need a quick walkthrough?</h2><p>Watch relevant English video tutorials for this section. Choose a video and follow along step by step.</p></div><a class="st-btn" href="https://www.youtube.com/results?search_query=how%20to%20search%20buy%20sell%20rent%20houses%20plots%20apartments%20real%20estate%20website%20English%20tutorial" target="_blank" rel="noopener noreferrer"><span class="st-play">▶</span> Watch Find a property Tutorials</a></section>
+<section class="skyline-silent-guide" aria-label="Silent visual tutorial"><div class="ssg-kicker">SKYLINE VIDEO LEARNING · NO VOICE</div><h2>Find or share a property</h2><p class="ssg-sub">A silent, animated step-by-step walkthrough. Use Pause, Next or Replay to follow each action at your own pace.</p><div class="ssg-stage"><div class="ssg-step active"><div class="ssg-number">1</div><div class="ssg-copy"><b>Choose Buy, Sell or Rent</b><p>Start with the action that matches what you want to do.</p></div></div><div class="ssg-step"><div class="ssg-number">2</div><div class="ssg-copy"><b>Set your requirements</b><p>Choose the location, property type, budget or details relevant to your search.</p></div></div><div class="ssg-step"><div class="ssg-number">3</div><div class="ssg-copy"><b>Contact SKYLINE</b><p>Use the contact options to discuss your property requirement and next steps.</p></div></div></div><div class="ssg-progress"><span></span></div><div class="ssg-controls"><button class="primary" type="button" data-play>Pause</button><button type="button" data-next>Next step →</button><button type="button" data-restart>↻ Replay</button><span class="ssg-status">STEP 1 OF 3</span></div></section>
+<script id="skyline-silent-guide-js">
+document.querySelectorAll('.skyline-silent-guide').forEach(function(box){
+ const steps=Array.from(box.querySelectorAll('.ssg-step'));if(!steps.length)return;
+ const bar=box.querySelector('.ssg-progress span'),status=box.querySelector('.ssg-status');
+ let current=0,playing=true,timer=null;
+ function show(n){current=(n+steps.length)%steps.length;steps.forEach((el,i)=>el.classList.toggle('active',i===current));bar.style.width=((current+1)/steps.length*100)+'%';status.textContent='STEP '+(current+1)+' OF '+steps.length;}
+ function stop(){if(timer)clearInterval(timer);timer=null;}
+ function start(){stop();playing=true;box.querySelector('[data-play]').textContent='Pause';timer=setInterval(()=>show(current+1),5200);}
+ box.querySelector('[data-play]').addEventListener('click',()=>{if(playing){stop();playing=false;box.querySelector('[data-play]').textContent='Play'}else start()});
+ box.querySelector('[data-next]').addEventListener('click',()=>show(current+1));
+ box.querySelector('[data-restart]').addEventListener('click',()=>{show(0);start()});
+ show(0);start();
+});
+</script>
 </body></html>
