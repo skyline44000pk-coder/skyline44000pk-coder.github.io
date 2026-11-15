@@ -103,7 +103,7 @@ header{background:rgba(6,19,33,.96);border-bottom:1px solid rgba(229,204,156,.2)
 .stats{margin-top:-42px;border-radius:2px;padding:30px 18px;box-shadow:0 18px 55px rgba(8,24,39,.12)}
 .stat strong{font-size:26px}.stat small{letter-spacing:1.4px}
 section{padding:108px 0}.section-head{margin-bottom:48px}.section-head h2{font-size:clamp(32px,4.2vw,50px);letter-spacing:-2px}
-.about-grid{gap:82px}.visual{min-height:490px;border-radius:2px;background:linear-gradient(0deg,rgba(5,20,33,.58),rgba(5,20,33,.04)),url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=88") center/cover}
+.about-grid{gap:82px}.visual{min-height:490px;border-radius:2px;background:linear-gradient(0deg,rgba(5,20,33,.58),rgba(5,20,33,.04)),url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=84") center/cover}
 .visual:before{inset:18px;border-color:rgba(255,255,255,.48)}.visual:after{display:none}
 .visual-label b{font-size:46px;color:#f2d7a5}.visual-label span{color:#fff}
 .services{background:#f2f0eb}
@@ -138,8 +138,14 @@ section{padding:108px 0}.section-head{margin-bottom:48px}.section-head h2{font-s
 .home-hub .section-head{max-width:760px}
 .hub-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
 .hub-card{position:relative;padding:0 0 22px;overflow:hidden;border:1px solid #e5dfd3;border-radius:3px;min-height:310px;box-shadow:0 8px 26px rgba(8,24,39,.055);gap:10px}
-.hub-card .hub-photo{display:block;width:100%;height:158px;object-fit:cover;margin:0 0 5px;transition:transform .5s ease}
-.hub-card:hover .hub-photo{transform:scale(1.045)}
+.hub-card .hub-photo{display:block;width:100%;height:112px;object-fit:cover;margin:0 0 5px;transition:transform .5s ease;filter:saturate(1.12) contrast(1.04)}
+.hub-card:hover .hub-photo{transform:scale(1.055)}
+.hub-card{border-top:3px solid #c5a46d;min-height:265px}
+.hub-card.primary .hub-photo{height:132px}
+.hub-card b{font-size:17px;color:#081827}
+.hub-card.primary b{color:#fff}
+.hub-card .hub-icon{top:88px;box-shadow:0 4px 15px rgba(0,0,0,.16)}
+.hub-card.primary .hub-icon{top:108px}
 .hub-card .hub-icon{position:absolute;top:133px;right:17px;width:43px;height:43px;display:grid;place-items:center;background:#c5a46d;color:#071827;border:3px solid #fff;border-radius:50%;font-size:19px}
 .hub-card b,.hub-card>span:not(.hub-icon),.hub-card em{margin-left:20px;margin-right:20px}
 .hub-card b{font-size:16px;letter-spacing:-.35px;margin-top:4px}
@@ -147,9 +153,9 @@ section{padding:108px 0}.section-head{margin-bottom:48px}.section-head h2{font-s
 .hub-card em{margin-top:auto;padding-top:8px;letter-spacing:.08em}
 .hub-card.primary{background:#081827;border-color:#081827;box-shadow:0 15px 38px rgba(8,24,39,.18)}
 .hub-card.primary .hub-photo{height:180px}
-.hub-card.primary .hub-icon{top:155px;background:#e5cc9c}
+.hub-card.primary .hub-icon{top:108px;background:#e5cc9c}
 @media(max-width:850px){.hub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hub-card{min-height:300px}}
-@media(max-width:540px){.hub-grid{grid-template-columns:1fr;gap:14px}.hub-card{min-height:0}.hub-card .hub-photo{height:190px}.hub-card.primary .hub-photo{height:205px}.hub-card .hub-icon{top:165px}.hub-card.primary .hub-icon{top:180px}}
+@media(max-width:540px){.hub-grid{grid-template-columns:1fr;gap:14px}.hub-card{min-height:0}.hub-card .hub-photo{height:190px}.hub-card.primary .hub-photo{height:205px}.hub-card .hub-photo{height:98px}.hub-card.primary .hub-photo{height:112px}.hub-card .hub-icon{top:74px}.hub-card.primary .hub-icon{top:88px}}
 
 
 /* Premium property category showcase */
@@ -159,7 +165,7 @@ section{padding:108px 0}.section-head{margin-bottom:48px}.section-head h2{font-s
 .showcase-head h2{font:800 clamp(32px,4.5vw,52px)/1.1 Manrope,sans-serif;letter-spacing:-2px;margin:15px 0}
 .showcase-head p{max-width:560px;color:#c3ced8;font-size:14px;line-height:1.8;margin:0}
 .showcase-head .btn{flex-shrink:0}
-.showcase-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;grid-template-rows:230px 230px;gap:15px}
+.showcase-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;grid-template-rows:190px 190px;gap:13px}
 .showcase-card{position:relative;display:block;overflow:hidden;min-height:200px;background:#102d43;color:#fff}
 .showcase-card.showcase-large{grid-row:span 2}
 .showcase-card img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;transition:transform .6s}
@@ -171,7 +177,7 @@ section{padding:108px 0}.section-head{margin-bottom:48px}.section-head h2{font-s
 .showcase-copy em{font-style:normal;font-size:11px;color:#e8edf1}
 .showcase-note{font-size:11px;color:#aebdca;margin:18px 0 0;line-height:1.6}
 @media(max-width:850px){.showcase-grid{grid-template-columns:1fr 1fr;grid-template-rows:250px 190px 190px}.showcase-card.showcase-large{grid-column:span 2;grid-row:auto}.showcase-head{align-items:flex-start;flex-direction:column}}
-@media(max-width:540px){.featured-showcase{padding:72px 0}.showcase-grid{grid-template-columns:1fr;grid-template-rows:240px 190px 190px 190px}.showcase-card.showcase-large{grid-column:auto}.showcase-copy b{font-size:21px}.showcase-head h2{font-size:35px}}
+@media(max-width:540px){.featured-showcase{padding:72px 0}.showcase-grid{grid-template-columns:1fr;grid-template-rows:175px 145px 145px 145px}.showcase-card.showcase-large{grid-column:auto}.showcase-copy b{font-size:21px}.showcase-head h2{font-size:35px}}
 
 </style>
 </head>
@@ -192,24 +198,24 @@ section{padding:108px 0}.section-head{margin-bottom:48px}.section-head h2{font-s
 </div></div></section>
 <div class="wrap"><div class="stats"><div class="stat"><strong>01</strong><small>Single point of contact</small></div><div class="stat"><strong>360°</strong><small>Project support</small></div><div class="stat"><strong>2 Cities</strong><small>Service coverage</small></div></div></div>
 <section class="home-hub" id="main-features"><div class="wrap"><div class="section-head"><div class="eyebrow">SKYLINE quick access</div><h2>Everything important, right from the homepage.</h2><p>Post a property ad, find listings, check society information and explore free tools without searching through the website.</p></div><div class="hub-grid">
-<a class="hub-card primary" href="marketplace.html#post-ad"><img class="hub-photo" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=88" alt="Modern luxury home exterior" loading="lazy"><span class="hub-icon">📸</span><b>Post a Property Ad — FREE</b><span>Add your plot, house, flat or commercial property with up to 10 watermarked photos and your own WhatsApp / call number.</span><em>POST YOUR AD ↗</em></a>
-<a class="hub-card" href="marketplace.html#browse"><img class="hub-photo" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Contemporary residential property" loading="lazy"><span class="hub-icon">🏡</span><b>Browse Property Ads</b><span>Explore properties for sale and rent across Pakistan and contact the advertiser directly.</span><em>VIEW LISTINGS ↗</em></a>
-<a class="hub-card" href="pakistan-guide.html#society-check"><img class="hub-photo" src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=85" alt="Modern planned urban architecture" loading="lazy"><span class="hub-icon">🛡️</span><b>Society Checker</b><span>Find guidance and official CDA / RDA links for checking housing society approval information.</span><em>CHECK INFORMATION ↗</em></a>
-<a class="hub-card" href="public-tools.html"><img class="hub-photo" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85" alt="Architectural planning desk" loading="lazy"><span class="hub-icon">🧮</span><b>Free Public Tools</b><span>Useful property and construction calculators and practical tools.</span><em>OPEN FREE TOOLS ↗</em></a>
-<a class="hub-card" href="resources.html"><img class="hub-photo" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85" alt="Construction site and project progress" loading="lazy"><span class="hub-icon">📊</span><b>Construction Rates & Updates</b><span>Explore construction resources, rate guidance and useful updates.</span><em>EXPLORE RESOURCES ↗</em></a>
-<a class="hub-card" href="properties.html"><img class="hub-photo" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85" alt="Commercial property towers" loading="lazy"><span class="hub-icon">🏢</span><b>Property Services</b><span>Explore property-related services and connect with SKYLINE for assistance.</span><em>VIEW SERVICES ↗</em></a>
-<a class="hub-card" href="services.html"><img class="hub-photo" src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=85" alt="Construction materials at a site" loading="lazy"><span class="hub-icon">🧱</span><b>Construction Services Guide</b><span>Learn about construction, civil works and project coordination services.</span><em>READ GUIDE ↗</em></a>
-<a class="hub-card" href="materials-guide.html"><img class="hub-photo" src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=85" alt="Building material close-up" loading="lazy"><span class="hub-icon">📦</span><b>Building Materials Guide</b><span>Explore material categories, specifications and sourcing guidance.</span><em>VIEW MATERIALS ↗</em></a>
-<a class="hub-card" href="project-guide.html"><img class="hub-photo" src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=900&q=85" alt="Architectural design and project planning" loading="lazy"><span class="hub-icon">📋</span><b>Project Planning Guide</b><span>Helpful steps and information to plan construction work.</span><em>PLAN YOUR PROJECT ↗</em></a>
+<a class="hub-card primary" href="marketplace.html#post-ad"><img class="hub-photo" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=84" alt="Modern luxury home exterior" loading="lazy"><span class="hub-icon">📸</span><b>Post a Property Ad — FREE</b><span>Add your plot, house, flat or commercial property with up to 10 watermarked photos and your own WhatsApp / call number.</span><em>POST YOUR AD ↗</em></a>
+<a class="hub-card" href="marketplace.html#browse"><img class="hub-photo" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=760&q=82" alt="Contemporary residential property" loading="lazy"><span class="hub-icon">🏡</span><b>Browse Property Ads</b><span>Explore properties for sale and rent across Pakistan and contact the advertiser directly.</span><em>VIEW LISTINGS ↗</em></a>
+<a class="hub-card" href="pakistan-guide.html#society-check"><img class="hub-photo" src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=760&q=82" alt="Modern planned urban architecture" loading="lazy"><span class="hub-icon">🛡️</span><b>Society Checker</b><span>Find guidance and official CDA / RDA links for checking housing society approval information.</span><em>CHECK INFORMATION ↗</em></a>
+<a class="hub-card" href="public-tools.html"><img class="hub-photo" src="https://images.unsplash.com/photo-1503387762-592dea58efb9?auto=format&fit=crop&w=760&q=82" alt="Architectural planning desk" loading="lazy"><span class="hub-icon">🧮</span><b>Free Public Tools</b><span>Useful property and construction calculators and practical tools.</span><em>OPEN FREE TOOLS ↗</em></a>
+<a class="hub-card" href="resources.html"><img class="hub-photo" src="https://images.unsplash.com/photo-1503387762-592dea58efb9?auto=format&fit=crop&w=760&q=82" alt="Construction site and project progress" loading="lazy"><span class="hub-icon">📊</span><b>Construction Rates & Updates</b><span>Explore construction resources, rate guidance and useful updates.</span><em>EXPLORE RESOURCES ↗</em></a>
+<a class="hub-card" href="properties.html"><img class="hub-photo" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=760&q=82" alt="Commercial property towers" loading="lazy"><span class="hub-icon">🏢</span><b>Property Services</b><span>Explore property-related services and connect with SKYLINE for assistance.</span><em>VIEW SERVICES ↗</em></a>
+<a class="hub-card" href="services.html"><img class="hub-photo" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=760&q=82" alt="Construction materials at a site" loading="lazy"><span class="hub-icon">🧱</span><b>Construction Services Guide</b><span>Learn about construction, civil works and project coordination services.</span><em>READ GUIDE ↗</em></a>
+<a class="hub-card" href="materials-guide.html"><img class="hub-photo" src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=760&q=82" alt="Building material close-up" loading="lazy"><span class="hub-icon">📦</span><b>Building Materials Guide</b><span>Explore material categories, specifications and sourcing guidance.</span><em>VIEW MATERIALS ↗</em></a>
+<a class="hub-card" href="project-guide.html"><img class="hub-photo" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=760&q=82" alt="Architectural design and project planning" loading="lazy"><span class="hub-icon">📋</span><b>Project Planning Guide</b><span>Helpful steps and information to plan construction work.</span><em>PLAN YOUR PROJECT ↗</em></a>
 </div></div></section>
 
 <section class="featured-showcase" id="featured-property-showcase"><div class="wrap">
 <div class="showcase-head"><div><div class="eyebrow">Explore property</div><h2>Find a place to call your own.</h2><p>Explore homes, plots, apartments and commercial opportunities listed by people across Pakistan.</p></div><a class="btn gold" href="marketplace.html#browse">BROWSE ALL PROPERTY ADS ↗</a></div>
 <div class="showcase-grid">
-<a class="showcase-card showcase-large" href="marketplace.html#browse"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=88" alt="Contemporary house exterior" loading="lazy"><span class="showcase-shade"></span><span class="showcase-copy"><small>01 / RESIDENTIAL</small><b>Houses & Homes</b><em>Explore available listings ↗</em></span></a>
-<a class="showcase-card" href="marketplace.html#browse"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=85" alt="Modern apartment interior" loading="lazy"><span class="showcase-shade"></span><span class="showcase-copy"><small>02 / APARTMENTS</small><b>Flats & Apartments</b><em>Explore listings ↗</em></span></a>
-<a class="showcase-card" href="marketplace.html#browse"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85" alt="Open land and green landscape" loading="lazy"><span class="showcase-shade"></span><span class="showcase-copy"><small>03 / LAND</small><b>Plots & Land</b><em>Explore listings ↗</em></span></a>
-<a class="showcase-card" href="marketplace.html#browse"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85" alt="Commercial office buildings" loading="lazy"><span class="showcase-shade"></span><span class="showcase-copy"><small>04 / COMMERCIAL</small><b>Shops & Commercial</b><em>Explore listings ↗</em></span></a>
+<a class="showcase-card showcase-large" href="marketplace.html#browse"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85" alt="Contemporary house exterior" loading="lazy"><span class="showcase-shade"></span><span class="showcase-copy"><small>01 / RESIDENTIAL</small><b>Houses & Homes</b><em>Explore available listings ↗</em></span></a>
+<a class="showcase-card" href="marketplace.html#browse"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=760&q=82" alt="Modern apartment interior" loading="lazy"><span class="showcase-shade"></span><span class="showcase-copy"><small>02 / APARTMENTS</small><b>Flats & Apartments</b><em>Explore listings ↗</em></span></a>
+<a class="showcase-card" href="marketplace.html#browse"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=760&q=82" alt="Open land and green landscape" loading="lazy"><span class="showcase-shade"></span><span class="showcase-copy"><small>03 / LAND</small><b>Plots & Land</b><em>Explore listings ↗</em></span></a>
+<a class="showcase-card" href="marketplace.html#browse"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=760&q=82" alt="Commercial office buildings" loading="lazy"><span class="showcase-shade"></span><span class="showcase-copy"><small>04 / COMMERCIAL</small><b>Shops & Commercial</b><em>Explore listings ↗</em></span></a>
 </div>
 <p class="showcase-note">Category photography is illustrative. Actual availability, prices and property details appear in individual public ads.</p>
 </div></section>
