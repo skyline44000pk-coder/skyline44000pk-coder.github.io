@@ -151,6 +151,28 @@ section{padding:108px 0}.section-head{margin-bottom:48px}.section-head h2{font-s
 @media(max-width:850px){.hub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hub-card{min-height:300px}}
 @media(max-width:540px){.hub-grid{grid-template-columns:1fr;gap:14px}.hub-card{min-height:0}.hub-card .hub-photo{height:190px}.hub-card.primary .hub-photo{height:205px}.hub-card .hub-icon{top:165px}.hub-card.primary .hub-icon{top:180px}}
 
+
+/* Premium property category showcase */
+.featured-showcase{background:#081827;color:#fff;padding:100px 0 92px}
+.showcase-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}
+.showcase-head .eyebrow{color:#e5cc9c}
+.showcase-head h2{font:800 clamp(32px,4.5vw,52px)/1.1 Manrope,sans-serif;letter-spacing:-2px;margin:15px 0}
+.showcase-head p{max-width:560px;color:#c3ced8;font-size:14px;line-height:1.8;margin:0}
+.showcase-head .btn{flex-shrink:0}
+.showcase-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;grid-template-rows:230px 230px;gap:15px}
+.showcase-card{position:relative;display:block;overflow:hidden;min-height:200px;background:#102d43;color:#fff}
+.showcase-card.showcase-large{grid-row:span 2}
+.showcase-card img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;transition:transform .6s}
+.showcase-card:hover img{transform:scale(1.055)}
+.showcase-shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(2,12,21,.88),rgba(2,12,21,.02) 75%)}
+.showcase-copy{position:absolute;left:22px;right:18px;bottom:22px;display:flex;flex-direction:column;gap:7px}
+.showcase-copy small{font-size:9px;letter-spacing:2px;color:#e5cc9c;font-weight:800}
+.showcase-copy b{font:800 23px Manrope;letter-spacing:-.6px}
+.showcase-copy em{font-style:normal;font-size:11px;color:#e8edf1}
+.showcase-note{font-size:11px;color:#aebdca;margin:18px 0 0;line-height:1.6}
+@media(max-width:850px){.showcase-grid{grid-template-columns:1fr 1fr;grid-template-rows:250px 190px 190px}.showcase-card.showcase-large{grid-column:span 2;grid-row:auto}.showcase-head{align-items:flex-start;flex-direction:column}}
+@media(max-width:540px){.featured-showcase{padding:72px 0}.showcase-grid{grid-template-columns:1fr;grid-template-rows:240px 190px 190px 190px}.showcase-card.showcase-large{grid-column:auto}.showcase-copy b{font-size:21px}.showcase-head h2{font-size:35px}}
+
 </style>
 </head>
 <body>
@@ -180,6 +202,17 @@ section{padding:108px 0}.section-head{margin-bottom:48px}.section-head h2{font-s
 <a class="hub-card" href="materials-guide.html"><img class="hub-photo" src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=85" alt="Building material close-up" loading="lazy"><span class="hub-icon">📦</span><b>Building Materials Guide</b><span>Explore material categories, specifications and sourcing guidance.</span><em>VIEW MATERIALS ↗</em></a>
 <a class="hub-card" href="project-guide.html"><img class="hub-photo" src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=900&q=85" alt="Architectural design and project planning" loading="lazy"><span class="hub-icon">📋</span><b>Project Planning Guide</b><span>Helpful steps and information to plan construction work.</span><em>PLAN YOUR PROJECT ↗</em></a>
 </div></div></section>
+
+<section class="featured-showcase" id="featured-property-showcase"><div class="wrap">
+<div class="showcase-head"><div><div class="eyebrow">Explore property</div><h2>Find a place to call your own.</h2><p>Explore homes, plots, apartments and commercial opportunities listed by people across Pakistan.</p></div><a class="btn gold" href="marketplace.html#browse">BROWSE ALL PROPERTY ADS ↗</a></div>
+<div class="showcase-grid">
+<a class="showcase-card showcase-large" href="marketplace.html#browse"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=88" alt="Contemporary house exterior" loading="lazy"><span class="showcase-shade"></span><span class="showcase-copy"><small>01 / RESIDENTIAL</small><b>Houses & Homes</b><em>Explore available listings ↗</em></span></a>
+<a class="showcase-card" href="marketplace.html#browse"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=85" alt="Modern apartment interior" loading="lazy"><span class="showcase-shade"></span><span class="showcase-copy"><small>02 / APARTMENTS</small><b>Flats & Apartments</b><em>Explore listings ↗</em></span></a>
+<a class="showcase-card" href="marketplace.html#browse"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85" alt="Open land and green landscape" loading="lazy"><span class="showcase-shade"></span><span class="showcase-copy"><small>03 / LAND</small><b>Plots & Land</b><em>Explore listings ↗</em></span></a>
+<a class="showcase-card" href="marketplace.html#browse"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85" alt="Commercial office buildings" loading="lazy"><span class="showcase-shade"></span><span class="showcase-copy"><small>04 / COMMERCIAL</small><b>Shops & Commercial</b><em>Explore listings ↗</em></span></a>
+</div>
+<p class="showcase-note">Category photography is illustrative. Actual availability, prices and property details appear in individual public ads.</p>
+</div></section>
 <section id="about"><div class="wrap about-grid"><div class="visual"><div class="visual-label"><b>SKYLINE</b><span>Practical solutions. Dependable service. A better building experience.</span></div></div><div class="about-copy"><div class="eyebrow">Who we are</div><h2>Confidence at every stage of your build.</h2><p>SKYLINE CONSTRUCTION & TRADING supports clients with construction and civil works, dependable building material sourcing, and sales and purchase assistance. We focus on clear communication, practical coordination and quality-minded service.</p><div class="checks"><span><i>✦</i> Clear communication</span><span><i>✦</i> Quality-minded supply</span><span><i>✦</i> Practical coordination</span><span><i>✦</i> Local market support</span></div><a class="btn gold" href="#contact">TALK TO OUR TEAM ↗</a></div></div></section>
 <section class="services" id="services"><div class="wrap"><div class="section-head"><div class="eyebrow">What we do</div><h2>Services designed around your project.</h2><p>From early planning to materials and execution support, get the essentials coordinated with one dependable team.</p></div><div class="cards">
 <article class="service"><img class="photo" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80" alt="Construction workers carrying out building work" loading="lazy"><span class="num">01 / BUILD</span><h3>Construction & Civil Works</h3><p>Support for building construction and civil work requirements, with a focus on practical execution and project coordination.</p></article>
