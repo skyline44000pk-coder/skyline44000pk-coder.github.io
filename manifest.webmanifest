@@ -1,7 +1,7 @@
 {
   "id": "/",
-  "name": "skylines.com",
-  "short_name": "skylines.com",
+  "name": "skyline",
+  "short_name": "skyline",
   "description": "Find, buy, sell and rent property across Pakistan.",
   "start_url": "/marketplace.html",
   "scope": "/",
