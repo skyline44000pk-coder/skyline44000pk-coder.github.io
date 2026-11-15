@@ -21,8 +21,72 @@
 <section class="panel"><h2>Terms &amp; approval</h2><p class="note">This quotation is based on quantities, specifications and rates entered above. Final price is subject to site measurement, approved drawings, material brand/grade, supplier availability, transport, wastage, taxes and written agreement. No work is confirmed until both parties approve the final scope and payment schedule.</p><div class="grid"><label class="field">Customer approval / signature<input placeholder="Sign / name"></label><label class="field">SKYLINE authorised signature<input placeholder="Sign / name"></label><label class="field">Contact<input value="+92 313 9826270" readonly></label></div></section>
 <div class="actions no-print"><button class="gold" onclick="window.print()">Print / Save PDF</button><button onclick="location.href='https://wa.me/923139826270?text='+encodeURIComponent('Assalam-o-Alaikum, I would like to discuss a SKYLINE construction quotation.')">WhatsApp SKYLINE</button></div></main>
 <script>
-const ref=[{c:"Material",d:"Cement 50kg bag — PBS Islamabad reference",u:"bag",r:1523,city:"Islamabad"},{c:"Material",d:"Cement 50kg bag — PBS Rawalpindi reference",u:"bag",r:1497,city:"Rawalpindi"},{c:"Steel",d:"Saria Grade 60 — market reference (confirm brand)",u:"kg",r:252},{c:"Labour",d:"Mason / raj mistri — PBS Islamabad daily wage",u:"day",r:2405,city:"Islamabad"},{c:"Labour",d:"Mason / raj mistri — PBS Rawalpindi daily wage",u:"day",r:2370,city:"Rawalpindi"},{c:"Labour",d:"Unskilled labourer — PBS reference",u:"day",r:1500},{c:"Electrical",d:"Electrician per point — PBS Islamabad reference",u:"point",r:487,city:"Islamabad"},{c:"Electrical",d:"Electrician per point — PBS Rawalpindi reference",u:"point",r:471,city:"Rawalpindi"}];const tbody=document.getElementById("rows");
-function addRow(x={}){let tr=document.createElement("tr");tr.innerHTML='<td><input value="'+(x.c||"")+'" placeholder="Category"></td><td><input value="'+(x.d||"")+'" placeholder="Description"></td><td><input value="'+(x.u||"unit")+'"></td><td><input type="number" min="0" step="any" value="'+(x.q||0)+'"></td><td><input type="number" min="0" step="any" value="'+(x.r??"")+'" placeholder="Confirmed rate"></td><td class="amount">Rs. 0</td><td class="no-print"><button type="button">×</button></td>';tbody.append(tr);tr.querySelectorAll("input").forEach(i=>i.addEventListener("input",calc));tr.querySelector("button").onclick=()=>{tr.remove();calc()};calc()}
-function money(n){return "Rs. "+Math.round(n).toLocaleString("en-PK")}function calc(){let sum=0;[...tbody.rows].forEach(tr=>{let q=Number(tr.cells[3].querySelector("input").value)||0,r=Number(tr.cells[4].querySelector("input").value)||0,a=q*r;sum+=a;tr.querySelector(".amount").textContent=money(a)});let o=+other.value||0,d=+discount.value||0,t=+tax.value||0;subtotal.textContent=money(sum);otherOut.textContent=money(o);discountOut.textContent=money(d);taxOut.textContent=money(t);grand.textContent=money(Math.max(0,sum+o-d+t))}
-add.onclick=()=>addRow();defaults.onclick=()=>{tbody.innerHTML="";ref.filter(x=>!x.city||x.city===city.value).forEach(addRow)};["other","discount","tax"].forEach(id=>document.getElementById(id).addEventListener("input",calc));date.value=new Date().toISOString().slice(0,10);defaults.click();
+(() => {
+  const $ = id => document.getElementById(id);
+  const tbody = $("rows");
+  const city = $("city");
+  const other = $("other"), discount = $("discount"), tax = $("tax");
+  const ref = [
+    {c:"Material",d:"Cement 50kg bag — PBS Islamabad reference",u:"bag",r:1523,city:"Islamabad"},
+    {c:"Material",d:"Cement 50kg bag — PBS Rawalpindi reference",u:"bag",r:1497,city:"Rawalpindi"},
+    {c:"Steel",d:"Saria Grade 60 — market reference (confirm brand)",u:"kg",r:252},
+    {c:"Labour",d:"Mason / raj mistri — PBS Islamabad daily wage",u:"day",r:2405,city:"Islamabad"},
+    {c:"Labour",d:"Mason / raj mistri — PBS Rawalpindi daily wage",u:"day",r:2370,city:"Rawalpindi"},
+    {c:"Labour",d:"Unskilled labourer — PBS reference",u:"day",r:1500},
+    {c:"Electrical",d:"Electrician per point — PBS Islamabad reference",u:"point",r:487,city:"Islamabad"},
+    {c:"Electrical",d:"Electrician per point — PBS Rawalpindi reference",u:"point",r:471,city:"Rawalpindi"}
+  ];
+  const money = n => "Rs. " + Math.round(n).toLocaleString("en-PK");
+  function calc() {
+    let sum = 0;
+    [...tbody.rows].forEach(tr => {
+      const q = Number(tr.cells[3].querySelector("input").value) || 0;
+      const r = Number(tr.cells[4].querySelector("input").value) || 0;
+      const amount = q * r;
+      sum += amount;
+      tr.querySelector(".amount").textContent = money(amount);
+    });
+    const o = Number(other.value) || 0, d = Number(discount.value) || 0, t = Number(tax.value) || 0;
+    $("subtotal").textContent = money(sum);
+    $("otherOut").textContent = money(o);
+    $("discountOut").textContent = money(d);
+    $("taxOut").textContent = money(t);
+    $("grand").textContent = money(Math.max(0, sum + o - d + t));
+  }
+  function addRow(x = {}) {
+    const tr = document.createElement("tr");
+    const values = [x.c || "", x.d || "", x.u || "unit", x.q ?? 0, x.r ?? ""];
+    values.forEach((value, index) => {
+      const td = document.createElement("td");
+      const input = document.createElement("input");
+      input.value = String(value);
+      if (index === 3 || index === 4) { input.type = "number"; input.min = "0"; input.step = "any"; }
+      if (index === 0) input.placeholder = "Category";
+      if (index === 1) input.placeholder = "Description";
+      if (index === 4) input.placeholder = "Confirmed rate";
+      input.addEventListener("input", calc);
+      td.appendChild(input); tr.appendChild(td);
+    });
+    const amountCell = document.createElement("td");
+    amountCell.className = "amount"; amountCell.textContent = money(0); tr.appendChild(amountCell);
+    const removeCell = document.createElement("td"); removeCell.className = "no-print";
+    const removeButton = document.createElement("button"); removeButton.type = "button"; removeButton.textContent = "×";
+    removeButton.setAttribute("aria-label", "Remove line item");
+    removeButton.addEventListener("click", () => { tr.remove(); calc(); });
+    removeCell.appendChild(removeButton); tr.appendChild(removeCell);
+    tbody.appendChild(tr); calc();
+  }
+  $("add").addEventListener("click", () => addRow());
+  $("defaults").addEventListener("click", () => {
+    tbody.replaceChildren();
+    ref.filter(x => !x.city || x.city === city.value).forEach(addRow);
+  });
+  city.addEventListener("change", () => {
+    tbody.replaceChildren();
+    ref.filter(x => !x.city || x.city === city.value).forEach(addRow);
+  });
+  [other, discount, tax].forEach(el => el.addEventListener("input", calc));
+  $("date").value = new Date().toISOString().slice(0, 10);
+  $("defaults").click();
+})();
 </script></body></html>
