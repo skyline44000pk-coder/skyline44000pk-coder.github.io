@@ -10,14 +10,14 @@
 <label class="field">City<select id="city"><option>Islamabad</option><option>Rawalpindi</option></select></label><label class="field">Society / sector / site<input id="site" placeholder="e.g. DHA Phase 2"></label><label class="field">Project type<select id="project"><option>New house</option><option>Grey structure</option><option>Finishing / renovation</option><option>Commercial construction</option><option>Civil works</option><option>Material supply</option><option>Custom work</option></select></label>
 <label class="field">Covered area (sq ft)<input id="area" type="number" min="0" placeholder="Optional"></label><label class="field">Prepared by<input value="SKYLINE CONSTRUCTION & TRADING" readonly></label><label class="field">Validity (days)<input id="validity" type="number" value="7" min="1"></label>
 <label class="field" style="grid-column:1/-1">Scope / notes<textarea id="scope" placeholder="Work scope, specifications, exclusions and payment milestones"></textarea></label></div></section>
-<section class="panel"><h2>Quotation line items</h2><p class="note">Only dated reference rates with a source are prefilled. Confirm supplier quotes before issuing. Blank rates mean no dependable current local rate was established in this research.</p>
-<div class="tablewrap"><table><thead><tr><th>Category</th><th>Description / specification</th><th>Unit</th><th>Qty</th><th>Rate (Rs.)</th><th>Amount (Rs.)</th><th class="no-print">Remove</th></tr></thead><tbody id="rows"></tbody></table></div>
+<section class="panel"><h2>Quotation line items</h2><p class="note">Select a brand for each item. Published market references are indicative and may not be city-delivered quotes. Confirm dealer, grade, size, delivery and tax before issuing.</p>
+<div class="tablewrap"><table><thead><tr><th>Category</th><th>Description / specification</th><th>Brand</th><th>Unit</th><th>Qty</th><th>Rate (Rs.)</th><th>Amount (Rs.)</th><th class="no-print">Remove</th></tr></thead><tbody id="rows"></tbody></table></div>
 <div class="actions no-print"><button type="button" class="gold" id="add">+ Add line item</button><button type="button" id="defaults">Load researched reference items</button></div>
 <div class="grid"><label class="field">Other charges (Rs.)<input id="other" type="number" value="0" min="0"></label><label class="field">Discount (Rs.)<input id="discount" type="number" value="0" min="0"></label><label class="field">Tax / withholding (Rs.)<input id="tax" type="number" value="0" min="0"></label></div>
 <div class="totals"><div><span>Items subtotal</span><b id="subtotal">Rs. 0</b></div><div><span>Other charges</span><b id="otherOut">Rs. 0</b></div><div><span>Discount</span><b id="discountOut">Rs. 0</b></div><div><span>Tax entered</span><b id="taxOut">Rs. 0</b></div><div class="grand"><span>Grand total</span><b id="grand">Rs. 0</b></div></div></section>
-<section class="panel"><h2>Rate research &amp; notes</h2><p class="note">Reference snapshot: 15 November 2026. PBS weekly cement and wage data are official statistical averages, not supplier offers. Steel figures are published market listing ranges. Rates vary by brand, grade, delivery, quantity, site access and tax.</p>
-<ul class="source"><li>Cement 50kg: Islamabad Rs 1,523; Rawalpindi Rs 1,497 — PBS, week ended 12 Nov 2026.</li><li>Mason/day: Islamabad Rs 2,405; Rawalpindi Rs 2,370. Labourer/day: Rs 1,500 — PBS September 2026 city wage data.</li><li>Electrician/point: Islamabad Rs 487; Rawalpindi Rs 471 — PBS September 2026.</li><li>Steel Grade 60: Islamabad and Rawalpindi reference range Rs 251–253/kg — market listing dated 15 Nov 2026; verify brand and delivered rate.</li><li>Bricks, sand, crush, concrete, tiles, plumbing, paint, wiring and finishing: no single dependable current site-specific rate prefilled. Enter a confirmed written supplier/contractor quote.</li></ul>
-<p class="source">Sources: <a href="https://www.pbs.gov.pk/" target="_blank" rel="noopener">Pakistan Bureau of Statistics</a> · <a href="https://atapata.pk/pulse/steel-prices/" target="_blank" rel="noopener">Steel market rate listing</a> · <a href="https://patwari.pk/tools/construction-cost-calculator/1-kanal-rawalpindi" target="_blank" rel="noopener">Rawalpindi construction price reference</a>. Rates last researched 15 Nov 2026. Estimate only; not a fixed offer or legal/tax advice.</p></section>
+<section class="panel"><h2>Rate research &amp; notes</h2><p class="note">Brand-wise reference snapshot: 15 November 2026. Cement figures are retailer-listed prices; steel figures are published brand-wise market ranges converted to indicative midpoints for calculation. These are not guaranteed Islamabad/Rawalpindi delivered quotes. Labour figures are PBS statistical averages. Confirm supplier, grade, size, delivery, quantity and tax before issuing.</p>
+<ul class="source"><li>Cement 50kg OPC: Bestway Rs 1,645; Lucky Rs 1,645; DG Khan Rs 1,665; Fauji Rs 1,600; Maple Leaf Rs 1,705; Pakcem Rs 1,650; Flying Rs 1,595; Pioneer Rs 1,650 — retailer-listed snapshot 15 Nov 2026; not city-specific delivered offers.</li><li>Steel Grade 60 brand reference midpoints (Rs/kg): Amreli 260, Mughal 261, Agha 261, Ittehad 260, AF 260, Five Star 259, Moiz 256, Naveena 255, Union 257 — calculated from published brand ranges dated 15 Nov 2026. Actual range and bar size can change quote.</li><li>Mason/day: Islamabad Rs 2,405; Rawalpindi Rs 2,370. Labourer/day: Rs 1,500 — PBS September 2026 city wage data.</li><li>Electrical labour per point: Islamabad Rs 487; Rawalpindi Rs 471 — PBS September 2026 reference, not cable/product price.</li><li>Tiles, pipes, paint, sanitary and cable product rates are left blank until a verifiable current brand/product/dealer quote is available. Select brand and enter confirmed rate.</li></ul>
+<p class="source">Sources: <a href="https://www.pbs.gov.pk/" target="_blank" rel="noopener">Pakistan Bureau of Statistics</a> · <a href="https://atapata.pk/pulse/steel-prices/" target="_blank" rel="noopener">Steel brand-wise market ranges</a> · <a href="https://gharhub.com/shop/cement" target="_blank" rel="noopener">Cement retailer-listed brand prices</a> · <a href="https://bajriwaly.com/cement-price-today-pakistan/" target="_blank" rel="noopener">Cement brand cross-check</a>. Rates last researched 15 Nov 2026. Estimate only; not a fixed offer or legal/tax advice.</p></section>
 <section class="panel"><h2>Terms &amp; approval</h2><p class="note">This quotation is based on quantities, specifications and rates entered above. Final price is subject to site measurement, approved drawings, material brand/grade, supplier availability, transport, wastage, taxes and written agreement. No work is confirmed until both parties approve the final scope and payment schedule.</p><div class="grid"><label class="field">Customer approval / signature<input placeholder="Sign / name"></label><label class="field">SKYLINE authorised signature<input placeholder="Sign / name"></label><label class="field">Contact<input value="+92 313 9826270" readonly></label></div></section>
 <div class="actions no-print"><button class="gold" onclick="window.print()">Print / Save PDF</button><button onclick="location.href='https://wa.me/923139826270?text='+encodeURIComponent('Assalam-o-Alaikum, I would like to discuss a SKYLINE construction quotation.')">WhatsApp SKYLINE</button></div></main>
 <script>
@@ -26,15 +26,40 @@
   const tbody = $("rows");
   const city = $("city");
   const other = $("other"), discount = $("discount"), tax = $("tax");
+  const brandOptions = {
+    "Cement":["Bestway","Lucky","DG Khan","Fauji","Maple Leaf","Pakcem","Flying","Pioneer","Askari","Cherat","Kohat","Power","Paidar","Attock","Gharibwal","Fecto","Other / specify"],
+    "Steel":["Amreli","Mughal","Agha","Ittehad","AF Steel","Five Star","Moiz","Naveena","Union","Other / specify"],
+    "Tiles":["Master Tiles","Shabbir Tiles","Other / specify"],
+    "Paint":["Berger","ICI Dulux","Brighto","Nippon","Other / specify"],
+    "Pipes":["Master","Popular","Dadex","Other / specify"],
+    "Electrical":["Pakistan Cables","Newage Cables","Fast Cables","Other / specify"],
+    "Sanitary":["Sonex","Faisal","Master","Porta","Other / specify"],
+    "Bricks":["Awwal","Doem","Local kiln / other"],
+    "Labour":["SKYLINE / contractor rate","Other / specify"]
+  };
   const ref = [
-    {c:"Material",d:"Cement 50kg bag — PBS Islamabad reference",u:"bag",r:1523,city:"Islamabad"},
-    {c:"Material",d:"Cement 50kg bag — PBS Rawalpindi reference",u:"bag",r:1497,city:"Rawalpindi"},
-    {c:"Steel",d:"Saria Grade 60 — market reference (confirm brand)",u:"kg",r:252},
-    {c:"Labour",d:"Mason / raj mistri — PBS Islamabad daily wage",u:"day",r:2405,city:"Islamabad"},
-    {c:"Labour",d:"Mason / raj mistri — PBS Rawalpindi daily wage",u:"day",r:2370,city:"Rawalpindi"},
-    {c:"Labour",d:"Unskilled labourer — PBS reference",u:"day",r:1500},
-    {c:"Electrical",d:"Electrician per point — PBS Islamabad reference",u:"point",r:487,city:"Islamabad"},
-    {c:"Electrical",d:"Electrician per point — PBS Rawalpindi reference",u:"point",r:471,city:"Rawalpindi"}
+    {c:"Cement",d:"OPC 50kg bag — retailer listing reference; confirm Islamabad/Rawalpindi delivery",b:"Bestway",u:"bag",r:1645},
+    {c:"Cement",d:"OPC 50kg bag — retailer listing reference; confirm Islamabad/Rawalpindi delivery",b:"Lucky",u:"bag",r:1645},
+    {c:"Cement",d:"OPC 50kg bag — retailer listing reference; confirm Islamabad/Rawalpindi delivery",b:"DG Khan",u:"bag",r:1665},
+    {c:"Cement",d:"OPC 50kg bag — retailer listing reference; confirm Islamabad/Rawalpindi delivery",b:"Fauji",u:"bag",r:1600},
+    {c:"Cement",d:"OPC 50kg bag — retailer listing reference; confirm Islamabad/Rawalpindi delivery",b:"Maple Leaf",u:"bag",r:1705},
+    {c:"Cement",d:"OPC 50kg bag — retailer listing reference; confirm Islamabad/Rawalpindi delivery",b:"Pakcem",u:"bag",r:1650},
+    {c:"Cement",d:"OPC 50kg bag — retailer listing reference; confirm Islamabad/Rawalpindi delivery",b:"Flying",u:"bag",r:1595},
+    {c:"Cement",d:"OPC 50kg bag — retailer listing reference; confirm Islamabad/Rawalpindi delivery",b:"Pioneer",u:"bag",r:1650},
+    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"Amreli",u:"kg",r:260},
+    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"Mughal",u:"kg",r:261},
+    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"Agha",u:"kg",r:261},
+    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"Ittehad",u:"kg",r:260},
+    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"AF Steel",u:"kg",r:260},
+    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"Five Star",u:"kg",r:259},
+    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"Moiz",u:"kg",r:256},
+    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"Naveena",u:"kg",r:255},
+    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"Union",u:"kg",r:257},
+    {c:"Labour",d:"Mason / raj mistri — PBS Islamabad daily wage reference",b:"SKYLINE / contractor rate",u:"day",r:2405,city:"Islamabad"},
+    {c:"Labour",d:"Mason / raj mistri — PBS Rawalpindi daily wage reference",b:"SKYLINE / contractor rate",u:"day",r:2370,city:"Rawalpindi"},
+    {c:"Labour",d:"Unskilled labourer — PBS daily wage reference; confirm local rate",b:"SKYLINE / contractor rate",u:"day",r:1500},
+    {c:"Electrical",d:"Electrician per point — PBS Islamabad reference; brand selectable separately",b:"Pakistan Cables",u:"point",r:487,city:"Islamabad"},
+    {c:"Electrical",d:"Electrician per point — PBS Rawalpindi reference; brand selectable separately",b:"Pakistan Cables",u:"point",r:471,city:"Rawalpindi"}
   ];
   const money = n => "Rs. " + Math.round(n).toLocaleString("en-PK");
   function calc() {
@@ -76,7 +101,7 @@
     removeCell.appendChild(removeButton); tr.appendChild(removeCell);
     tbody.appendChild(tr); calc();
   }
-  $("add").addEventListener("click", () => addRow());
+  const brandList = document.createElement("datalist"); brandList.id = "brand-list";\n  [...new Set(Object.values(brandOptions).flat())].forEach(name => { const opt = document.createElement("option"); opt.value = name; brandList.appendChild(opt); });\n  document.body.appendChild(brandList);\n  $("add").addEventListener("click", () => addRow());
   $("defaults").addEventListener("click", () => {
     tbody.replaceChildren();
     ref.filter(x => !x.city || x.city === city.value).forEach(addRow);
