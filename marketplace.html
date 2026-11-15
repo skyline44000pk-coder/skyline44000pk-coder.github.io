@@ -82,7 +82,7 @@
 <footer class="footer"><div class="wrap"><span><b>SKYLINE CONSTRUCTION & TRADING</b></span><span>+92 313 9826270 · skyline44000.pk@gmail.com</span><span><a href="index.html">Home</a> · <a href="properties.html">Property services</a></span></div></footer>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-// Add your Supabase Project URL and publishable key after creating the free backend.
+// SKYLINE Supabase project configuration. Use only the public publishable key here.
 // Never put a Supabase secret/service_role key in this public website.
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}));}
 let installPrompt=null;const installBar=document.getElementById('appInstallBar');const installBtn=document.getElementById('installAppBtn');const dismissInstall=document.getElementById('dismissInstall');window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;installBar.style.display='flex';});installBtn.addEventListener('click',async()=>{if(!installPrompt)return;installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;installBar.style.display='none';});dismissInstall.addEventListener('click',()=>installBar.style.display='none');window.addEventListener('appinstalled',()=>installBar.style.display='none');
@@ -111,7 +111,7 @@ const btn=el("submitBtn"),files=watermarkedPhotos;if(files.length>10){el("formSt
 btn.disabled=true;btn.textContent="SUBMITTING…";el("formStatus").textContent="Uploading photos and submitting your ad…";
 try{const urls=[];for(const file of files){if(!["image/jpeg","image/png","image/webp"].includes(file.type))throw new Error("Use JPG, PNG or WEBP photos only.");const path=crypto.randomUUID()+"/"+Date.now()+"-"+file.name.replace(/[^a-zA-Z0-9._-]/g,"_");const {error}=await client.storage.from(BUCKET).upload(path,file,{contentType:file.type,upsert:false});if(error)throw error;urls.push(client.storage.from(BUCKET).getPublicUrl(path).data.publicUrl);}
 const payload={title:el("title").value.trim(),purpose:el("purpose").value,property_type:el("kind").value,city:el("city").value,area:el("area").value.trim(),size:el("size").value.trim(),price:Number(el("price").value),bedrooms:el("beds").value?Number(el("beds").value):null,description:el("description").value.trim(),photo_urls:urls,contact_name:el("contactName").value.trim(),contact_phone:el("contactPhone").value.trim(),status:"approved"};
-const {error}=await client.from("property_listings").insert(payload);if(error)throw error;el("adForm").reset();watermarkedPhotos=[];el("photoPreview").innerHTML="";el("formStatus").textContent="Your free ad has been submitted for review. It will appear publicly after approval.";window.location.hash="#post-ad";
+const {error}=await client.from("property_listings").insert(payload);if(error)throw error;el("adForm").reset();watermarkedPhotos=[];el("photoPreview").innerHTML="";el("formStatus").textContent="Your free ad is now published and should appear in the approved listings. Please refresh the listings if it does not appear immediately.";window.location.hash="#post-ad";
 }catch(err){console.error(err);el("formStatus").textContent="Submission failed: "+(err.message||"Please check your connection and try again.");}
 finally{btn.disabled=false;btn.textContent="SUBMIT FREE PROPERTY AD";}});
 load();
