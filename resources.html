@@ -359,5 +359,23 @@ document.querySelectorAll('.skyline-silent-guide').forEach(function(box){
  show(0);start();
 });
 </script>
+
+<style id="skyline-feature-dock-css">
+body{padding-bottom:88px}
+.skyline-feature-dock{position:fixed;z-index:99999;left:50%;bottom:calc(10px + env(safe-area-inset-bottom));transform:translateX(-50%);width:min(720px,calc(100% - 28px));display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;padding:8px;background:rgba(9,22,42,.96);border:1px solid rgba(212,177,103,.42);border-radius:18px;box-shadow:0 12px 38px rgba(0,0,0,.28);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.skyline-feature-dock a{min-width:0;min-height:54px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border-radius:12px;color:#f8f5ed;text-decoration:none;font:700 10px/1.15 system-ui,sans-serif;text-align:center;padding:5px 3px;transition:background .18s ease,color .18s ease}
+.skyline-feature-dock a:hover,.skyline-feature-dock a:focus-visible{background:rgba(214,177,105,.2);color:#f2d49a;outline:2px solid #d6b169;outline-offset:1px}
+.skyline-feature-dock .sfd-icon{font-size:19px;line-height:1.1}
+.skyline-feature-dock a.sfd-primary{background:linear-gradient(135deg,#d9b66e,#f0d79e);color:#17253a}
+@media(max-width:420px){body{padding-bottom:82px}.skyline-feature-dock{width:calc(100% - 14px);bottom:calc(6px + env(safe-area-inset-bottom));gap:3px;padding:6px;border-radius:15px}.skyline-feature-dock a{min-height:50px;font-size:8px;padding:4px 1px}.skyline-feature-dock .sfd-icon{font-size:17px}}
+</style>
+<nav class="skyline-feature-dock" aria-label="SKYLINE main features">
+<a href="index.html"><span class="sfd-icon" aria-hidden="true">⌂</span><span>Home</span></a>
+<a class="sfd-primary" href="marketplace.html#post-ad"><span class="sfd-icon" aria-hidden="true">＋</span><span>Free Ad</span></a>
+<a href="properties.html"><span class="sfd-icon" aria-hidden="true">⌕</span><span>Properties</span></a>
+<a href="public-tools.html"><span class="sfd-icon" aria-hidden="true">▦</span><span>Calculators</span></a>
+<a href="pakistan-guide.html#society-check"><span class="sfd-icon" aria-hidden="true">✓</span><span>Society Check</span></a>
+</nav>
+
 </body>
 </html>
