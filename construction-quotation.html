@@ -26,47 +26,46 @@
   const tbody = $("rows");
   const city = $("city");
   const other = $("other"), discount = $("discount"), tax = $("tax");
-  const brandOptions = {
-    "Cement":["Bestway","Lucky","DG Khan","Fauji","Maple Leaf","Pakcem","Flying","Pioneer","Askari","Cherat","Kohat","Power","Paidar","Attock","Gharibwal","Fecto","Other / specify"],
-    "Steel":["Amreli","Mughal","Agha","Ittehad","AF Steel","Five Star","Moiz","Naveena","Union","Other / specify"],
-    "Tiles":["Master Tiles","Shabbir Tiles","Other / specify"],
-    "Paint":["Berger","ICI Dulux","Brighto","Nippon","Other / specify"],
-    "Pipes":["Master","Popular","Dadex","Other / specify"],
-    "Electrical":["Pakistan Cables","Newage Cables","Fast Cables","Other / specify"],
-    "Sanitary":["Sonex","Faisal","Master","Porta","Other / specify"],
-    "Bricks":["Awwal","Doem","Local kiln / other"],
-    "Labour":["SKYLINE / contractor rate","Other / specify"]
-  };
+  const brands = [
+    "Bestway","Lucky","DG Khan","Fauji","Maple Leaf","Pakcem","Flying","Pioneer","Askari","Cherat","Kohat","Power","Paidar","Attock","Gharibwal","Fecto",
+    "Amreli","Mughal","Agha","Ittehad","AF Steel","Five Star","Moiz","Naveena","Union",
+    "Master Tiles","Shabbir Tiles","Berger","ICI Dulux","Brighto","Nippon","Master","Popular","Dadex",
+    "Pakistan Cables","Newage Cables","Fast Cables","Sonex","Faisal","Porta","Awwal","Doem","Other / specify"
+  ];
+  const brandList = document.createElement("datalist");
+  brandList.id = "brand-list";
+  brands.forEach(name => { const opt = document.createElement("option"); opt.value = name; brandList.appendChild(opt); });
+  document.body.appendChild(brandList);
   const ref = [
-    {c:"Cement",d:"OPC 50kg bag — retailer listing reference; confirm Islamabad/Rawalpindi delivery",b:"Bestway",u:"bag",r:1645},
-    {c:"Cement",d:"OPC 50kg bag — retailer listing reference; confirm Islamabad/Rawalpindi delivery",b:"Lucky",u:"bag",r:1645},
-    {c:"Cement",d:"OPC 50kg bag — retailer listing reference; confirm Islamabad/Rawalpindi delivery",b:"DG Khan",u:"bag",r:1665},
-    {c:"Cement",d:"OPC 50kg bag — retailer listing reference; confirm Islamabad/Rawalpindi delivery",b:"Fauji",u:"bag",r:1600},
-    {c:"Cement",d:"OPC 50kg bag — retailer listing reference; confirm Islamabad/Rawalpindi delivery",b:"Maple Leaf",u:"bag",r:1705},
-    {c:"Cement",d:"OPC 50kg bag — retailer listing reference; confirm Islamabad/Rawalpindi delivery",b:"Pakcem",u:"bag",r:1650},
-    {c:"Cement",d:"OPC 50kg bag — retailer listing reference; confirm Islamabad/Rawalpindi delivery",b:"Flying",u:"bag",r:1595},
-    {c:"Cement",d:"OPC 50kg bag — retailer listing reference; confirm Islamabad/Rawalpindi delivery",b:"Pioneer",u:"bag",r:1650},
-    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"Amreli",u:"kg",r:260},
-    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"Mughal",u:"kg",r:261},
-    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"Agha",u:"kg",r:261},
-    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"Ittehad",u:"kg",r:260},
-    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"AF Steel",u:"kg",r:260},
-    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"Five Star",u:"kg",r:259},
-    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"Moiz",u:"kg",r:256},
-    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"Naveena",u:"kg",r:255},
-    {c:"Steel",d:"Grade 60 — brand market range midpoint; verify diameter and delivered rate",b:"Union",u:"kg",r:257},
+    {c:"Cement",d:"OPC 50kg bag — retailer-listed reference; confirm city delivery",b:"Bestway",u:"bag",r:1645},
+    {c:"Cement",d:"OPC 50kg bag — retailer-listed reference; confirm city delivery",b:"Lucky",u:"bag",r:1645},
+    {c:"Cement",d:"OPC 50kg bag — retailer-listed reference; confirm city delivery",b:"DG Khan",u:"bag",r:1665},
+    {c:"Cement",d:"OPC 50kg bag — retailer-listed reference; confirm city delivery",b:"Fauji",u:"bag",r:1600},
+    {c:"Cement",d:"OPC 50kg bag — retailer-listed reference; confirm city delivery",b:"Maple Leaf",u:"bag",r:1705},
+    {c:"Cement",d:"OPC 50kg bag — retailer-listed reference; confirm city delivery",b:"Pakcem",u:"bag",r:1650},
+    {c:"Cement",d:"OPC 50kg bag — retailer-listed reference; confirm city delivery",b:"Flying",u:"bag",r:1595},
+    {c:"Cement",d:"OPC 50kg bag — retailer-listed reference; confirm city delivery",b:"Pioneer",u:"bag",r:1650},
+    {c:"Steel",d:"Grade 60 — indicative midpoint of published brand range; confirm size/delivery",b:"Amreli",u:"kg",r:260},
+    {c:"Steel",d:"Grade 60 — indicative midpoint of published brand range; confirm size/delivery",b:"Mughal",u:"kg",r:261},
+    {c:"Steel",d:"Grade 60 — indicative midpoint of published brand range; confirm size/delivery",b:"Agha",u:"kg",r:261},
+    {c:"Steel",d:"Grade 60 — indicative midpoint of published brand range; confirm size/delivery",b:"Ittehad",u:"kg",r:260},
+    {c:"Steel",d:"Grade 60 — indicative midpoint of published brand range; confirm size/delivery",b:"AF Steel",u:"kg",r:260},
+    {c:"Steel",d:"Grade 60 — indicative midpoint of published brand range; confirm size/delivery",b:"Five Star",u:"kg",r:259},
+    {c:"Steel",d:"Grade 60 — indicative midpoint of published brand range; confirm size/delivery",b:"Moiz",u:"kg",r:256},
+    {c:"Steel",d:"Grade 60 — indicative midpoint of published brand range; confirm size/delivery",b:"Naveena",u:"kg",r:255},
+    {c:"Steel",d:"Grade 60 — indicative midpoint of published brand range; confirm size/delivery",b:"Union",u:"kg",r:257},
     {c:"Labour",d:"Mason / raj mistri — PBS Islamabad daily wage reference",b:"SKYLINE / contractor rate",u:"day",r:2405,city:"Islamabad"},
     {c:"Labour",d:"Mason / raj mistri — PBS Rawalpindi daily wage reference",b:"SKYLINE / contractor rate",u:"day",r:2370,city:"Rawalpindi"},
     {c:"Labour",d:"Unskilled labourer — PBS daily wage reference; confirm local rate",b:"SKYLINE / contractor rate",u:"day",r:1500},
-    {c:"Electrical",d:"Electrician per point — PBS Islamabad reference; brand selectable separately",b:"Pakistan Cables",u:"point",r:487,city:"Islamabad"},
-    {c:"Electrical",d:"Electrician per point — PBS Rawalpindi reference; brand selectable separately",b:"Pakistan Cables",u:"point",r:471,city:"Rawalpindi"}
+    {c:"Electrical labour",d:"Electrician per point — PBS Islamabad reference, not cable product price",b:"Pakistan Cables",u:"point",r:487,city:"Islamabad"},
+    {c:"Electrical labour",d:"Electrician per point — PBS Rawalpindi reference, not cable product price",b:"Pakistan Cables",u:"point",r:471,city:"Rawalpindi"}
   ];
   const money = n => "Rs. " + Math.round(n).toLocaleString("en-PK");
   function calc() {
     let sum = 0;
     [...tbody.rows].forEach(tr => {
-      const q = Number(tr.cells[3].querySelector("input").value) || 0;
-      const r = Number(tr.cells[4].querySelector("input").value) || 0;
+      const q = Number(tr.cells[4].querySelector("input").value) || 0;
+      const r = Number(tr.cells[5].querySelector("input").value) || 0;
       const amount = q * r;
       sum += amount;
       tr.querySelector(".amount").textContent = money(amount);
@@ -80,15 +79,16 @@
   }
   function addRow(x = {}) {
     const tr = document.createElement("tr");
-    const values = [x.c || "", x.d || "", x.u || "unit", x.q ?? 0, x.r ?? ""];
+    const values = [x.c || "", x.d || "", x.b || "", x.u || "unit", x.q ?? 0, x.r ?? ""];
     values.forEach((value, index) => {
       const td = document.createElement("td");
       const input = document.createElement("input");
       input.value = String(value);
-      if (index === 3 || index === 4) { input.type = "number"; input.min = "0"; input.step = "any"; }
+      if (index === 4 || index === 5) { input.type = "number"; input.min = "0"; input.step = "any"; }
       if (index === 0) input.placeholder = "Category";
       if (index === 1) input.placeholder = "Description";
-      if (index === 4) input.placeholder = "Confirmed rate";
+      if (index === 2) { input.setAttribute("list","brand-list"); input.placeholder = "Select / type brand"; }
+      if (index === 5) input.placeholder = "Confirmed rate";
       input.addEventListener("input", calc);
       td.appendChild(input); tr.appendChild(td);
     });
@@ -101,7 +101,7 @@
     removeCell.appendChild(removeButton); tr.appendChild(removeCell);
     tbody.appendChild(tr); calc();
   }
-  const brandList = document.createElement("datalist"); brandList.id = "brand-list";\n  [...new Set(Object.values(brandOptions).flat())].forEach(name => { const opt = document.createElement("option"); opt.value = name; brandList.appendChild(opt); });\n  document.body.appendChild(brandList);\n  $("add").addEventListener("click", () => addRow());
+  $("add").addEventListener("click", () => addRow());
   $("defaults").addEventListener("click", () => {
     tbody.replaceChildren();
     ref.filter(x => !x.city || x.city === city.value).forEach(addRow);
