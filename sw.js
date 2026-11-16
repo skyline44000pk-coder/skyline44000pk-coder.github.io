@@ -1,5 +1,5 @@
-const CACHE_NAME="skyline-app-v4";
-const APP_SHELL=["/","/index.html","/marketplace.html","/properties.html","/services.html","/materials-guide.html","/project-guide.html","/resources.html","/public-tools.html","/pakistan-guide.html","/manifest.webmanifest","/skyline-logo.png","/app-icon.svg"];
+const CACHE_NAME="skyline-app-v5";
+const APP_SHELL=["/","/index.html","/marketplace.html","/properties.html","/services.html","/materials-guide.html","/project-guide.html","/resources.html","/public-tools.html","/pakistan-guide.html","/property-tax.html","/construction-quotation.html","/manifest.webmanifest","/skyline-logo.png","/app-icon.svg"];
 self.addEventListener("install",event=>{
   event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(APP_SHELL)).then(()=>self.skipWaiting()));
 });
