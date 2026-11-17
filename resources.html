@@ -189,8 +189,8 @@ button,input,select,textarea{max-width:100%;font:inherit}
 <div class="panel calc-card">
 <h3>Project inputs</h3><p class="sub">Covered area is entered per floor. Change any value to recalculate.</p>
 <div class="fields">
-<div class="field full"><label for="quality">Construction quality / scope</label><select id="quality"><option value="grey">Grey structure</option><option value="mid">Mid-finish complete</option><option value="aplus">A+ quality / custom specification</option></select><span class="hint" id="qualityHint">Reference range: Rs. 2,700–4,500 per sq ft. Editable midpoint is a planning input, not a quote.</span></div>
-<div class="field"><label for="rate">Main rate (PKR / sq ft)</label><input id="rate" type="number" min="1" step="50" value="3600" inputmode="decimal"></div>
+<div class="field full"><label for="quality">Construction quality / scope</label><select id="quality"><option value="grey">Grey structure</option><option value="mid">Mid-finish complete</option><option value="aplus">A+ quality / custom specification</option></select><span class="hint" id="qualityHint">No verified official fixed rate is assumed. Enter a current written contractor quote for the selected scope.</span></div>
+<div class="field"><label for="rate">Main rate (PKR / sq ft)</label><input id="rate" type="number" min="1" step="50" placeholder="Enter current written quote" inputmode="decimal"></div>
 <div class="field"><label for="finishRate">Separate finishes / MEP allowance (PKR / sq ft)</label><input id="finishRate" type="number" min="0" step="50" value="0" inputmode="decimal"><span class="hint">Optional above-ground allowance. Keep at 0 if your main rate already includes these works.</span></div>
 <div class="field"><label for="floorArea">Covered area per floor (sq ft)</label><input id="floorArea" type="number" min="1" step="1" value="1000" inputmode="decimal"></div>
 <div class="field"><label for="floors">Number of floors</label><select id="floors"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
@@ -211,7 +211,7 @@ button,input,select,textarea{max-width:100%;font:inherit}
 <div class="breakrow"><span>Contingency / extras</span><strong id="extraCost">—</strong></div>
 </div></div>
 <div class="formula">Formula: (per-floor area × floors × main rate) + (above-ground covered area × separate finishes / MEP allowance) + (basement area × basement rate) + contingency. A blank basement rate uses the main rate; enter 0 to exclude basement cost. Keep the finishes allowance at 0 if already included in the main rate.</div>
-<div class="smallprint">Planning estimate only. Does not replace architectural/structural drawings, BOQ, site inspection or a written contractor quotation. Actual covered area, structural design, soil, access, labour, finish schedule and authority requirements can change the total.</div>
+<div class="smallprint">Planning estimate only. No market rate is pre-filled because no current, comparable supplier/contractor quote was verified in this review. Does not replace architectural/structural drawings, BOQ, site inspection or a written contractor quotation. Actual covered area, structural design, soil, access, labour, finish schedule and authority requirements can change the total.</div>
 </div>
 </div></div></section>
 
@@ -300,9 +300,9 @@ function costCalc(){
 }
 $('quality').addEventListener('change',()=>{
  const q=$('quality').value;
- if(q==='grey'){$('rate').value=3600;$('qualityHint').textContent='Published Twin Cities grey-structure guide range: Rs. 2,700–4,500/sq ft. Rs. 3,600 is the editable midpoint planning input.';}
- if(q==='mid'){$('rate').value=6150;$('qualityHint').textContent='Published Twin Cities mid-finish guide range: Rs. 4,800–7,500/sq ft. Rs. 6,150 is the editable midpoint planning input.';}
- if(q==='aplus'){$('rate').value='';$('qualityHint').textContent='No official fixed A+ rate is assumed. Enter your current written contractor rate and scope.';}
+ if(q==='grey'){$('rate').value='';$('qualityHint').textContent='Grey structure: enter a current written quote and confirm whether excavation, foundations, frame, masonry, plaster and waterproofing are included.';}
+ if(q==='mid'){$('rate').value='';$('qualityHint').textContent='Mid-finish: enter a current written quote and confirm the finish brands, MEP scope, kitchen, wardrobes, doors/windows and external works.';}
+ if(q==='aplus'){$('rate').value='';$('qualityHint').textContent='A+ / custom specification: no official fixed rate is assumed. Enter a current written contractor rate and detailed scope.';}
  costCalc();
 });
 ['rate','finishRate','floorArea','floors','basementArea','basementRate','extraPct'].forEach(id=>$(id).addEventListener('input',costCalc));
