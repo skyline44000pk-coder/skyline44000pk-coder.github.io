@@ -17,7 +17,7 @@
 <main class="wrap section">
 <div class="tabs" role="tablist"><button class="tab active" data-tab="buyer" type="button">Buyer · Purchase</button><button class="tab" data-tab="seller" type="button">Seller · Sale</button><button class="tab" data-tab="annual" type="button">Annual property tax</button></div>
 <section id="buyer" class="panel tabpanel"><h2>Buyer-side purchase estimate</h2><p class="muted">Section 236K is calculated on FBR fair market value, not automatically on the negotiated price. Enter the applicable FBR value below.</p>
-<div class="fields">
+<p class="hint">The PKR 10 million values below are examples only. Replace the FBR/DC notified minimum and declared transaction value with the exact figures for the property and transaction.</p><div class="fields">
 <div class="field"><label for="bCity">City</label><select id="bCity"><option>Islamabad</option><option>Rawalpindi</option></select></div>
 <div class="field"><label for="bType">Property type</label><select id="bType"><option>Residential</option><option>Commercial</option></select></div>
 <div class="field"><label for="bScheme">Society / sector / phase (optional)</label><input id="bScheme" placeholder="e.g. Sector, society and phase"></div>
@@ -28,7 +28,7 @@
 </div><p class="hint">FBR valuation is locality-specific, not one citywide figure. Islamabad SRO 2061(I)/2026 dated 5 November 2026 changes the rural ICT valuation reference to the latest ADC(R)/District Collector notification. Rawalpindi SRO 1513(I)/2026 dated 9 September 2026 amends specified locality entries in the Rawalpindi schedule. Match the exact locality and property type; do not substitute a generic DC or market rate.</p><div class="result" aria-live="polite"><div class="muted">Estimated federal advance tax · section 236K</div><strong id="bOut">PKR 125,000</strong><div class="line"><span>Applied rate</span><b id="bRate">1.25%</b></div><div class="line"><span>Taxable base</span><b id="bBase">PKR 10,000,000</b></div><div class="line"><span>Formula</span><b id="bFormula">Higher of declared value and FBR/DC minimum × rate</b></div></div>
 <div class="warn" id="bNote">Finance Act 2026 substitutes Division XVIII with a flat 1.25% rate under section 236K from 1 July 2026. FBR's separate Salient Features PDF states 1.5%, so the official summaries conflict; this calculator follows the operative Finance Act text. Confirm the transaction PSID with FBR before payment. Local stamp duty, registration, CVT, authority and society transfer charges are not included.</div><p class="hint">Finance Act 2026 omits Rule 1A of the Tenth Schedule, so there is no separate late-filer rate for FY 2026–27. A late return filer must be classified by actual ATL status on the transaction date. For non-ATL buyers, this calculator applies the Tenth Schedule Rule 1 bands: 10.5% up to PKR 50 million, 14.5% above PKR 50 million to PKR 100 million, and 18.5% above PKR 100 million. Confirm the final PSID and any special eligibility before payment.</p></section>
 <section id="seller" class="panel tabpanel hide"><h2>Seller-side sale estimate</h2><p class="muted">Section 236C is calculated on gross consideration received. This is advance tax, not the final capital-gains-tax liability.</p>
-<div class="fields">
+<p class="hint">The PKR 10 million values below are examples only. Replace the declared sale consideration and FBR/DC notified minimum with the exact figures for the property and transaction.</p><div class="fields">
 <div class="field"><label for="sCity">City</label><select id="sCity"><option>Islamabad</option><option>Rawalpindi</option></select></div>
 <div class="field"><label for="sType">Property type</label><select id="sType"><option>Residential</option><option>Commercial</option></select></div>
 <div class="field"><label for="sScheme">Society / sector / phase (optional)</label><input id="sScheme" placeholder="e.g. Sector, society and phase"></div>
@@ -93,7 +93,8 @@ function seller(){
   const s=document.getElementById('sStatus').value;
   const out=document.getElementById('sOut'),rate=document.getElementById('sRate'),base=document.getElementById('sBase'),note=document.getElementById('sNote');
   base.textContent=fmt(v);
-  const r=s==='atl'?.0275:.115,label=s==='atl'?'2.75% ATL':'11.5% non-ATL';
+  const r = s === 'atl' ? 0.0275 : 0.115;
+  const label = s === 'atl' ? '2.75% ATL' : '11.5% non-ATL';
   out.textContent=fmt(v*r);rate.textContent=label;document.getElementById('sFormula').textContent=fmt(v)+' × '+label;
   note.textContent='Planning base: higher of gross consideration and FBR/DC notified minimum; section 68(6)(ii) prevents the Division X consideration base from falling below the notified value. ATL rate: Finance Act 2026, Division X (2.75%). Non-ATL rate: Finance Act 2025, Tenth Schedule rule 1 (11.5%). Finance Act 2026 removed the separate late-filer rule; status follows actual ATL listing. CGT is separate and is not calculated here. Confirm the transaction PSID before payment.';
 }
