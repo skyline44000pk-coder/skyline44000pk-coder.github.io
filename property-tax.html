@@ -22,7 +22,8 @@
 <div class="field"><label for="bType">Property type</label><select id="bType"><option>Residential</option><option>Commercial</option></select></div>
 <div class="field"><label for="bScheme">Society / sector / phase (optional)</label><input id="bScheme" placeholder="e.g. Sector, society and phase"></div>
 <div class="field"><label for="bStatus">FBR status</label><select id="bStatus"><option value="atl">On ATL (includes late filer if currently listed)</option><option value="non">Not on ATL (non-filer / late return not listed)</option></select></div>
-<div class="field"><label for="bValue">FBR notified / DC stamp-duty value (PKR)</label><input id="bValue" type="number" min="0" value="10000000"></div>
+<div class="field"><label for="bValue">FBR notified / valuation for section 236K (PKR)</label><input id="bValue" type="number" min="0" value="10000000"></div>
+<div class="field"><label for="bDc">DC / e-Stamp valuation for ICT stamp duty (PKR)</label><input id="bDc" type="number" min="0" value="10000000"></div>
 <div class="field"><label for="bDeal">Declared / agreed transaction value (PKR)</label><input id="bDeal" type="number" min="0" value="10000000"></div>
 <div class="field"><label for="bArea">Plot size / area (optional)</label><input id="bArea" placeholder="e.g. 5 marla / 10 marla / 1 kanal"></div>
 </div><p class="hint">FBR valuation is locality-specific, not one citywide figure. Islamabad SRO 2061(I)/2026 dated 5 November 2026 changes the rural ICT valuation reference to the latest ADC(R)/District Collector notification. Rawalpindi SRO 1513(I)/2026 dated 9 September 2026 amends specified locality entries in the Rawalpindi schedule. Match the exact locality and property type; do not substitute a generic DC or market rate.</p><div class="result" aria-live="polite"><div class="muted">Estimated federal advance tax · section 236K</div><strong id="bOut">PKR 125,000</strong><div class="line"><span>Applied rate</span><b id="bRate">1.25%</b></div><div class="line"><span>Taxable base</span><b id="bBase">PKR 10,000,000</b></div><div class="line"><span>Formula</span><b id="bFormula">Higher of declared value and FBR/DC minimum × rate</b></div></div>
@@ -37,7 +38,7 @@
 <div class="field"><label for="sScheme">Society / sector / phase (optional)</label><input id="sScheme" placeholder="e.g. Sector, society and phase"></div>
 <div class="field"><label for="sStatus">FBR status</label><select id="sStatus"><option value="atl">On ATL (includes late filer if currently listed)</option><option value="non">Not on ATL (non-filer / late return not listed)</option></select></div>
 <div class="field"><label for="sValue">Declared gross sale consideration (PKR)</label><input id="sValue" type="number" min="0" value="10000000"></div>
-<div class="field"><label for="sFmv">FBR notified / DC stamp-duty value (PKR)</label><input id="sFmv" type="number" min="0" value="10000000"></div>
+<div class="field"><label for="sFmv">FBR notified fair market value / valuation for section 236C (PKR)</label><input id="sFmv" type="number" min="0" value="10000000"></div>
 <div class="field"><label for="sArea">Plot size / area (optional)</label><input id="sArea" placeholder="e.g. 5 marla / 10 marla / 1 kanal"></div>
 <div class="field"><label for="sDate">Acquisition date</label><input id="sDate" type="date"></div>
 <div class="field"><label for="sSaleDate">Proposed sale / transfer date</label><input id="sSaleDate" type="date"></div>
@@ -66,6 +67,7 @@
 <li><a href="https://urdu.fbr.gov.pk/propertyValuation/17653" target="_blank" rel="noopener">FBR — Islamabad immovable-property valuation schedule</a> · related amendments include SRO 2061(I)/2026 dated 5 November 2026; <a href="https://download1.fbr.gov.pk/SROs/202611513113944293SRO2061of2026.pdf" target="_blank" rel="noopener">open SRO 2061 PDF ↗</a>.</li>
 <li><a href="https://www.fbr.gov.pk/propertyValuation/17490" target="_blank" rel="noopener">FBR — Rawalpindi immovable-property valuation schedule</a> · related amendments include SRO 1513(I)/2026 dated 9 September 2026; <a href="https://download1.fbr.gov.pk/SROs/202699139043780SRO1513.pdf" target="_blank" rel="noopener">open SRO 1513 PDF ↗</a>.</li>
 <li><a href="https://www.punjab-zameen.gov.pk/estampInfo" target="_blank" rel="noopener">Punjab Land Records Authority — e-Stamp information</a> · dynamic challan assessment.</li>
+<li><a href="https://es.punjab-zameen.gov.pk/eStampCitizenPortal/ChallanFormView/HomePage" target="_blank" rel="noopener">Punjab official e-Stamp Citizen Portal</a> · live instrument/property-based challan for stamp duty, CVT, registration and related charges.</li>
 <li><a href="https://www.cda.gov.pk/" target="_blank" rel="noopener">CDA official website</a> · ICT jurisdiction and notices.</li>
 <li><a href="https://rda.gop.pk/" target="_blank" rel="noopener">Rawalpindi Development Authority</a> · planning / scheme jurisdiction information.</li>
 </ul><p class="hint">The operative Finance Act 2026 text sets ATL advance tax at 2.75% under section 236C and 1.25% under section 236K from 1 July 2026. FBR's Salient Features PDF states 1.5% for 236K, which conflicts with the operative Act; the calculator follows the Act and flags the discrepancy for PSID confirmation. For persons not on the ATL, Finance Act 2025 Tenth Schedule Rule 1 rates remain 10.5%, 14.5% and 18.5% for buyer 236K value bands and 11.5% for seller 236C. Finance Act 2026 omits Rule 1A, so no separate late-filer rate applies; classification follows actual ATL status. Buyer/seller tax bases use the higher of declared consideration and the entered FBR/DC notified minimum as a planning proxy; section 68 fair market value and the final PSID can differ. FBR valuation pages were rechecked on 17 November 2026; the linked ICT SRO 2061(I)/2026 and Rawalpindi SRO 1513(I)/2026 remain the latest related valuation amendments shown on those pages. Last checked: 17 November 2026.</p></section>
@@ -78,6 +80,8 @@ function buyer(){
   const notified=Math.max(0,Number(document.getElementById('bValue').value)||0);
   const declared=Math.max(0,Number(document.getElementById('bDeal').value)||0);
   const v=Math.max(notified,declared);
+  const dcNotified=Math.max(0,Number(document.getElementById('bDc').value)||0);
+  const stampValue=Math.max(dcNotified,declared);
   const s=document.getElementById('bStatus').value;
   const out=document.getElementById('bOut'),rate=document.getElementById('bRate'),base=document.getElementById('bBase'),formula=document.getElementById('bFormula'),note=document.getElementById('bNote');
   base.textContent=fmt(v);
@@ -90,9 +94,9 @@ function buyer(){
   note.textContent='Planning base: higher of declared transaction value and FBR/DC notified minimum. Section 68 defines fair market value by open-market price and makes the notified value a floor, so the final PSID base may be higher. Finance Act 2026, Division XVIII sets 1.25% for ATL; FBR’s Salient Features PDF states 1.5% for 236K, which conflicts with the operative Act. Non-ATL bands are 10.5% / 14.5% / 18.5% under Finance Act 2025, Tenth Schedule Rule 1. No separate late-filer tier applies from 1 July 2026; classification follows actual ATL status. Confirm the final PSID with FBR. Other local charges are not included.';
   const stampOut=document.getElementById('bStampOut'),stampRate=document.getElementById('bStampRate'),stampBase=document.getElementById('bStampBase'),stampFormula=document.getElementById('bStampFormula'),stampNote=document.getElementById('bStampNote'),total=document.getElementById('bTotal');
   if(document.getElementById('bCity').value==='Islamabad'){
-    const stamp=v*.01;
-    stampOut.textContent=fmt(stamp);stampRate.textContent='1% · ICT Article 23';stampBase.textContent=fmt(v);stampFormula.textContent=fmt(v)+' × 1%';
-    stampNote.textContent='ICT Stamp Act Article 23, as substituted by Finance Act 2025: 1% of immovable-property value for eligible conveyances, effective 1 July 2025. Article 62 transfers and exemptions are excluded. The e-Stamp valuation and instrument control; confirm who bears duty under the agreement. Source: official Finance Act 2025, last checked 17 November 2026.';
+    const stamp=stampValue*.01;
+    stampOut.textContent=fmt(stamp);stampRate.textContent='1% · ICT Article 23';stampBase.textContent=fmt(stampValue);stampFormula.textContent=fmt(stampValue)+' × 1%';
+    stampNote.textContent='ICT Stamp Act Article 23, as substituted by Finance Act 2025: 1% of immovable-property value for eligible conveyances, effective 1 July 2025. This estimate uses the higher of declared transaction value and entered DC/e-Stamp valuation; the official e-Stamp assessment controls. Article 62 transfers and exemptions are excluded. Confirm who bears duty under the agreement. Source: official Finance Act 2025, last checked 17 November 2026.';
     total.textContent=fmt(v*r+stamp);
   }else{
     stampOut.textContent='Official e-Stamp required';stampRate.textContent='Not estimated';stampBase.textContent='Authority assessed';stampFormula.textContent='Punjab e-Stamp challan';
