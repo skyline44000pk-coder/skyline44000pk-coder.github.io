@@ -356,4 +356,9 @@ const cityFilter=document.createElement('select');cityFilter.id='societyCityFilt
 
 
 
+
+<!-- SKYLINE autocomplete recovery -->
+<script id="skyline-autocomplete-recovery">
+(()=>{const i=document.getElementById('authoritySearch'),m=document.getElementById('authoritySuggestions'),o=document.getElementById('societySearchResults');if(!i||!m||!o)return;const norm=x=>String(x||'').toLowerCase().replace(/[^a-z0-9]/g,'');function rebuild(){const q=norm(i.value);m.replaceChildren();if(!q){m.style.display='none';return;}const a=[...o.querySelectorAll('article')].filter(x=>norm(x.textContent).includes(q));a.slice(0,25).forEach(x=>{const n=x.querySelector('b')?.textContent?.trim();if(!n)return;const b=document.createElement('button');b.type='button';b.setAttribute('role','option');b.style.cssText='display:block;width:100%;padding:12px;text-align:left;border:0;border-bottom:1px solid #eee;background:#fff;color:#172838;font:inherit';const st=document.createElement('strong');st.textContent=n;const sm=document.createElement('small');sm.textContent=x.querySelector('p')?.textContent||'';sm.style.cssText='display:block;color:#66727c;font-size:12px';b.append(st,sm);b.onclick=()=>{i.value=n;m.style.display='none';x.scrollIntoView({behavior:'smooth',block:'start'});};m.append(b);});m.style.display=a.length?'block':'none';}i.addEventListener('input',()=>setTimeout(rebuild,120));i.addEventListener('focus',()=>setTimeout(rebuild,120));})();
+</script>
 </body></html>
