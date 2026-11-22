@@ -412,6 +412,21 @@ section{padding:78px 0}.section-head h2{letter-spacing:-1.4px}.about-grid{gap:55
 <div class="eyebrow">Construction · Civil Works · Materials</div><h1>Build better.<br><span>Build with SKYLINE.</span></h1>
 <p>Construction support and building-material sourcing for Islamabad &amp; Rawalpindi. Get a quotation, explore services or use practical property tools — all from one place.</p>
 <div class="actions"><a class="btn gold" href="construction-quotation.html">GET CONSTRUCTION QUOTATION ↗</a><a class="btn outline" href="marketplace.html">EXPLORE PROPERTY ↗</a><a class="btn outline" href="#services">OUR SERVICES</a></div>
+
+<div class="skyline-hero-services" id="skyline-hero-service-shortcuts">
+ <div class="skyline-hero-services-title">ALL SKYLINE SERVICES <span>· TAP TO OPEN</span></div>
+ <div class="skyline-hero-services-grid">
+  <a class="skyline-hero-service" href="construction-quotation.html"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=180&q=75" alt=""><span class="skyline-hero-service-icon">⌂</span><b>Construction Quotation</b><i>↗</i></a>
+  <a class="skyline-hero-service" href="marketplace.html"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=180&q=75" alt=""><span class="skyline-hero-service-icon">⌂</span><b>Property Marketplace</b><i>↗</i></a>
+  <a class="skyline-hero-service" href="public-tools.html"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=180&q=75" alt=""><span class="skyline-hero-service-icon">▦</span><b>Tools & Calculators</b><i>↗</i></a>
+  <a class="skyline-hero-service" href="public-tools.html#government-fees"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=180&q=75" alt=""><span class="skyline-hero-service-icon">▤</span><b>Tax & Government</b><i>↗</i></a>
+  <a class="skyline-hero-service" href="pakistan-guide.html#society-search"><img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=180&q=75" alt=""><span class="skyline-hero-service-icon">⌕</span><b>Society Checker</b><i>↗</i></a>
+  <a class="skyline-hero-service" href="resources.html"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=180&q=75" alt=""><span class="skyline-hero-service-icon">⚒</span><b>Construction Resources</b><i>↗</i></a>
+  <a class="skyline-hero-service" href="pakistan-guide.html"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=180&q=75" alt=""><span class="skyline-hero-service-icon">▧</span><b>Pakistan Property Guide</b><i>↗</i></a>
+  <a class="skyline-hero-service" href="#contact"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=180&q=75" alt=""><span class="skyline-hero-service-icon">✆</span><b>Talk to SKYLINE</b><i>↗</i></a>
+ </div>
+</div>
+
 <div class="hero-note"><span><i class="dot"></i> Islamabad &amp; Rawalpindi</span><span><i class="dot"></i> Construction and civil work</span><span><i class="dot"></i> Material sourcing</span></div>
 </div></div></section>
 
@@ -757,6 +772,31 @@ header{background:rgba(7,26,45,.98);border-bottom-color:#c5a46d44}
 }
 @media(min-width:651px){
   .feature-hub .hub-card .hub-icon{display:inline-flex!important}
+}
+</style>
+
+
+<style id="skyline-hero-service-shortcuts-style">
+.skyline-hero-services{position:relative;z-index:3;margin:24px 0 0;max-width:850px}
+.skyline-hero-services-title{display:flex;align-items:center;gap:9px;margin:0 0 10px;color:#f0d9aa;font-size:10px;font-weight:900;letter-spacing:2px}
+.skyline-hero-services-title span{color:#d4dce3;font-size:9px;letter-spacing:1px}
+.skyline-hero-services-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.skyline-hero-service{position:relative;display:flex;align-items:center;gap:9px;min-width:0;min-height:58px;padding:7px 9px;background:linear-gradient(120deg,rgba(255,255,255,.16),rgba(255,255,255,.08));border:1px solid rgba(228,201,145,.62);border-radius:8px;color:#fff!important;text-decoration:none!important;box-shadow:0 5px 16px rgba(0,0,0,.18);transition:background .2s,border-color .2s,transform .2s}
+.skyline-hero-service:hover,.skyline-hero-service:focus-visible{background:rgba(197,164,109,.3);border-color:#f0d9aa;transform:translateY(-2px)}
+.skyline-hero-service>img{width:38px;height:38px;flex:0 0 38px;object-fit:cover;border-radius:6px;border:1px solid rgba(240,217,170,.7)}
+.skyline-hero-service-icon{position:absolute;left:35px;top:5px;width:18px;height:18px;display:grid;place-items:center;border-radius:50%;background:#d4b477;color:#102235;font-size:12px;font-weight:900;border:1px solid #fff}
+.skyline-hero-service b{min-width:0;font-size:10px;line-height:1.25;font-weight:800;color:#fff}
+.skyline-hero-service i{margin-left:auto;flex:0 0 auto;font-style:normal;color:#f0d9aa;font-size:13px}
+@media(max-width:650px){
+ .hero-content{padding-top:42px!important;padding-bottom:30px!important}
+ .hero{min-height:0!important}
+ .skyline-hero-services{margin-top:18px}
+ .skyline-hero-services-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .skyline-hero-service{min-height:54px;padding:6px 7px;gap:7px}
+ .skyline-hero-service>img{width:34px;height:34px;flex-basis:34px}
+ .skyline-hero-service-icon{left:30px;top:4px;width:17px;height:17px}
+ .skyline-hero-service b{font-size:10px}
+ .hero-note{margin-top:18px!important}
 }
 </style>
 
