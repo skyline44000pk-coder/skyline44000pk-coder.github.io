@@ -897,4 +897,13 @@ header{background:rgba(7,26,45,.98);border-bottom-color:#c5a46d44}
  .hero-content{padding:46px 0 55px!important}
 }
 </style>
+
+<style id="skyline-hero-wrap-top-align-fix">
+/* Flex-wrap auto margins were vertically centering the hero contents despite the padding reduction. */
+@media(max-width:650px){
+ .hero>.wrap{margin:0 auto!important;width:calc(100% - 44px)!important}
+ .hero{align-items:flex-start!important}
+ .hero-content{padding-top:22px!important;padding-bottom:24px!important}
+}
+</style>
 </body></html>
