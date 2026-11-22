@@ -906,4 +906,22 @@ header{background:rgba(7,26,45,.98);border-bottom-color:#c5a46d44}
  .hero-content{padding-top:22px!important;padding-bottom:24px!important}
 }
 </style>
+
+<style id="skyline-force-mobile-hero-gap-fix">
+/* Override stacked legacy mobile rules: start hero copy close to the header. */
+@media(max-width:650px){
+ #home.hero{min-height:0!important;padding-top:0!important;align-items:flex-start!important}
+ #home.hero>.wrap{width:calc(100% - 30px)!important;margin:0 auto!important}
+ #home .hero-content{padding:8px 0 18px!important;margin:0!important}
+ #home .eyebrow{margin:0!important;padding-top:0!important}
+ #home h1{margin:9px 0 10px!important;font-size:clamp(34px,9.4vw,44px)!important;line-height:1.06!important}
+ #home p{margin:0 0 10px!important;line-height:1.48!important}
+ #home .skyline-channel-cta{margin:8px 0 10px!important}
+ #home .skyline-hero-services{margin:8px 0 0!important}
+ #home .skyline-hero-services-title{margin-bottom:7px!important}
+ #home .skyline-hero-services-grid{gap:7px!important}
+ #home .skyline-hero-service{min-height:54px!important}
+ #home .hero-note{margin-top:12px!important}
+}
+</style>
 </body></html>
